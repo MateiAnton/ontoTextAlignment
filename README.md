@@ -5,5 +5,3 @@ Abstract: Despite the impressive advancements in Large Language Models (LLMs), t
 
 You can find the information on the code dependencies in the requirements.txt file.
 
-Due to GitHub's limited storage capacity, the datasets are available for download at the following link: https://zenodo.org/records/11093509.
-
