@@ -43,7 +43,7 @@ def main(argv):
     sentence_embeddings = {key: get_bert_embedding(sentence) for key, sentence in tqdm(id_axiom_sentence_dict.items())}
     
     # Save embeddings to a file
-    file_path = f"{ontology_file}_embeddings.pkl"
+    file_path = f"{ontology_file}_SBERT_embeddings.pkl"
     sentence_embeddings_converted = {key: value.cpu().numpy() for key, value in sentence_embeddings.items()}
     
     # Use TensorFlow's file I/O to save the numpy arrays

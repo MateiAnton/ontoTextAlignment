@@ -47,8 +47,8 @@ def main(argv):
 #    input_text = "The symptoms of COVID‑19 are variable but often include fever, cough, headache, fatigue, breathing difficulties, loss of smell, and loss of taste."
 #    input_embedding = get_bert_embedding(input_text, tokenizer, model, device)
 #
-#    # Compute embeddings for each sentence in the ontology
-#    sentence_embeddings = {key: get_bert_embedding(sentence, tokenizer, model, device) for key, sentence in tqdm(id_axiom_sentence_dict.items())}
+    # Compute embeddings for each sentence in the ontology
+    sentence_embeddings = {key: get_bert_embedding(sentence, tokenizer, model, device) for key, sentence in tqdm(id_axiom_sentence_dict.items())}
 #
 #    # Calculate cosine similarities between input text and each ontology sentence
 #    similarities = {key: cosine_similarity(input_embedding.cpu().numpy(), sentence.cpu().numpy())[0][0] for key, sentence in sentence_embeddings.items()}

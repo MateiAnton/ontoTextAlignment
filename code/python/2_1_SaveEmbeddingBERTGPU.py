@@ -33,7 +33,7 @@ def main(argv):
 
     # Initialize the SentenceTransformer model on the appropriate device
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = SentenceTransformer('paraphrase-MiniLM-L6-v2').to(device)
+    model = SentenceTransformer('bert-large-uncased').to(device)
     
     # Function to get BERT embedding for a given text
     def get_bert_embedding(text):
@@ -43,7 +43,7 @@ def main(argv):
     sentence_embeddings = {key: get_bert_embedding(sentence) for key, sentence in tqdm(id_axiom_sentence_dict.items())}
     
     # Save embeddings to a file
-    file_path = f"{ontology_file}_embeddings.pkl"
+    file_path = f"{ontology_file}_BERT_embeddings.pkl"
     sentence_embeddings_converted = {key: value.cpu().numpy() for key, value in sentence_embeddings.items()}
     
     # Use TensorFlow's file I/O to save the numpy arrays

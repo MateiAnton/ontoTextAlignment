@@ -11,10 +11,10 @@ import faiss
 
 # # file_path = "/home/jieying/ontologies/snomed2021_id_to_axiom_sentence.jsonberg_large_uncased_dict_file.pkl"
 # # file_path = "/home/jieying/ontologies/snomed2021_id_to_axiom_sentence.jsonSBERT_dict_file.pkl"
-# file_path = "/home/jieying/ontologies/sig_covid19_k_minimalMod.owl_annotated.owlsnomed_id_to_axiom_sentence.json"
-# file_path_BERT =file_path + "berg_large_uncased_dict_file.pkl"
-# file_path_SBERT =file_path + "SBERT_dict_file.pkl"
-# file_path_SapBERT =file_path + "SapBERT_dict_file.pkl"
+file_path = "/home/matei/projects/ontoTextAlignment/code/python/Merged_GeoFault.ttl_id_to_axiom_sentence.json"
+file_path_BERT =file_path + "_BERT_embeddings.pkl"
+file_path_SBERT =file_path + "_SBERT_embeddings.pkl"
+file_path_SapBERT =file_path + "_SapBERT_embeddings.pkl"
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 CUDA_VISIBLE_DEVICE=0
@@ -52,10 +52,10 @@ def k_excerpt_BERT(input_text, arg2, k=None, is_file_path=True):
             berg_axiom_vectors = np.load(file, allow_pickle=True).item()
     else:
         berg_axiom_vectors = arg2
-
+    
     # Convert dictionary values to a list of numpy arrays and reshape them to 1D
-    berg_axiom_vector_list = [sentence.cpu().numpy().squeeze() for sentence in berg_axiom_vectors.values()]
-
+    berg_axiom_vector_list = [sentence.squeeze() for sentence in berg_axiom_vectors.values()]
+    
     # Creating the array from the list
     berg_axiom_vector_array = np.array(berg_axiom_vector_list).astype("float32")
 
@@ -65,7 +65,6 @@ def k_excerpt_BERT(input_text, arg2, k=None, is_file_path=True):
     # Ensure that berg_axiom_vector_array is 2D: (num_vectors, vector_dimension)
     if berg_axiom_vector_array.ndim != 2:
         raise ValueError("Embedding array is not 2-dimensional")
-
 
     # Creating a FAISS index
     dimension = berg_axiom_vector_array.shape[1]  # assuming all vectors have the same dimension
@@ -179,7 +178,7 @@ def k_excerpt_SBERT(input_text, arg2, k=None, is_file_path=True):
         id_axiom_sentence_dict = arg2
 
     # Convert dictionary values to a list of numpy arrays
-    id_axiom_vector_list = [sentence.cpu().numpy() for sentence in id_axiom_sentence_dict.values()]
+    id_axiom_vector_list = [sentence for sentence in id_axiom_sentence_dict.values()]
 
     # Creating the array from the list
     id_axiom_vector_array = np.array(id_axiom_vector_list).astype("float32")
@@ -274,7 +273,7 @@ def k_excerpt_SapBERT(input_text, arg2, k=None, is_file_path=True):
         id_axiom_sentence_dict = arg2
 
     # Convert dictionary values to a list of numpy arrays and reshape them to 1D
-    axiom_vector_list = [sentence.cpu().numpy().squeeze() for sentence in id_axiom_sentence_dict.values()]
+    axiom_vector_list = [sentence.squeeze() for sentence in id_axiom_sentence_dict.values()]
     axiom_vector_array = np.array(axiom_vector_list).astype("float32")
 
     # Ensure that axiom_vector_array is 2D
@@ -320,10 +319,10 @@ def k_excerpt_SapBERT(input_text, arg2, k=None, is_file_path=True):
 
 
 
-# input_text = "The concept 'Crohn's disease of both small and large intestines (disorder)' is defined as an 'Inflammatory bowel disease (disorder)' and 'Crohn's disease (disorder)'. It has a 'Role group (attribute)' that is associated with the 'Granulomatous inflammation (morphologic abnormality)'. This inflammation is found in both the 'Structure of large intestine (body structure)' and the 'Structure of small intestine (body structure)"
-# # print(get_SBERT_embedding(input_text).size())
-# # print(list(berg_axiom_vectors.values())[1].size())
+input_text = "A fault is a planar fracture or discontinuity in a volume of rock across which there has been significant displacement as a result of rock-mass movements. Large faults within Earth's crust result from the action of plate tectonic forces, with the largest forming the boundaries between the plates, such as the megathrust faults of subduction zones or transform faults. Energy release associated with rapid movement on active faults is the cause of most earthquakes. Faults may also displace slowly, by aseismic creep."
+# print(get_SBERT_embedding(input_text).size())
+# print(list(berg_axiom_vectors.values())[1].size())
 
-# print(k_excerpt_BERT(input_text,file_path_BERT,5).keys())
-# print(k_excerpt_SBERT(input_text,file_path_SBERT,5).keys())
-# print(k_excerpt_SapBERT(input_text,file_path_SapBERT,5).keys())
+print(k_excerpt_BERT(input_text,file_path_BERT,5).keys())
+print(k_excerpt_SBERT(input_text,file_path_SBERT,5).keys())
+print(k_excerpt_SapBERT(input_text,file_path_SapBERT,5).keys())
