@@ -1,0 +1,384 @@
+http://purl.obolibrary.org/obo/RO_0000057 preferred_label has participant
+http://purl.obolibrary.org/obo/IAO_0000117 preferred_label term editor
+http://purl.obolibrary.org/obo/RO_0002351 preferred_label has member
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#older_than preferred_label older than
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:oblique_fault preferred_label oblique fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rotation_fault preferred_label rotation fault
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_right_of preferred_label right of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:positive_structure preferred_label positive structure
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_left_of preferred_label left of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:strike_separation preferred_label strike separation
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_tip_line preferred_label fault tip line
+http://purl.obolibrary.org/obo/RO_0002000 preferred_label 2D boundary of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core preferred_label fault core
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface preferred_label fault surface
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_spatially_partially_overlaps preferred_label spatially partially overlaps
+http://purl.obolibrary.org/obo/BFO_0000040 preferred_label material entity
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_carrier_of preferred_label carrier of
+http://purl.obolibrary.org/obo/IAO_0000600 preferred_label elucidation
+http://purl.obolibrary.org/obo/BFO_0000002 preferred_label continuant
+http://purl.obolibrary.org/obo/BFO_0000030 preferred_label object
+http://purl.obolibrary.org/obo/BFO_0000067 preferred_label site of
+http://purl.obolibrary.org/obo/BFO_0000067 preferred_label contains process
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_above preferred_label above
+http://purl.obolibrary.org/obo/RO_0002002 preferred_label has 2D boundary
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:physical_slip_surface preferred_label physical slip surface
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_spatially_discrete_from preferred_label spatially discrete from
+http://purl.obolibrary.org/obo/RO_0000056 preferred_label participates in
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:reverse_fault preferred_label reverse fault
+http://purl.obolibrary.org/obo/BFO_0000147 preferred_label zero-dimensional continuant fiat boundary
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#planar_shape preferred_label planar shape
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_tangential_proper_spatial_part_of preferred_label tangential proper spatial part of
+http://purl.obolibrary.org/obo/RO_0000085 preferred_label has function
+http://purl.obolibrary.org/obo/BFO_0000055 preferred_label realizes
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cataclasite preferred_label cataclasite
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_membrane preferred_label fault core membrane
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:deformation_band_object preferred_label deformation band
+http://purl.obolibrary.org/obo/BFO_0000031 preferred_label generically dependent continuant
+http://purl.obolibrary.org/obo/BFO_0000009 preferred_label two-dimensional spatial region
+http://purl.obolibrary.org/obo/IAO_0010000 preferred_label has axiom label
+http://purl.obolibrary.org/obo/BFO_0000011 preferred_label spatiotemporal region
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:relay_damage_zone preferred_label relay zone
+http://purl.obolibrary.org/obo/BFO_0000027 preferred_label object aggregate
+http://purl.obolibrary.org/obo/BFO_0000180 preferred_label BFO CLIF specification label
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation preferred_label fault maximum separation
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#is_smeared preferred_label is smeared
+http://purl.obolibrary.org/obo/BFO_0000140 preferred_label continuant fiat boundary
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:strike-slip_fault preferred_label strike-slip fault
+http://purl.obolibrary.org/obo/BFO_0000024 preferred_label fiat object part
+http://purl.obolibrary.org/obo/BFO_0000019 preferred_label quality
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#north_of preferred_label north of
+http://purl.obolibrary.org/obo/BFO_0000020 preferred_label specifically dependent continuant
+http://purl.obolibrary.org/obo/IAO_0000602 preferred_label has associated axiom(fol)
+http://purl.obolibrary.org/obo/BFO_0000029 preferred_label site
+http://purl.obolibrary.org/obo/BFO_0000026 preferred_label one-dimensional spatial region
+http://purl.obolibrary.org/obo/BFO_0000015 preferred_label process
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:antithetic_fault preferred_label antithetic fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#south_of preferred_label south of
+http://purl.obolibrary.org/obo/BFO_0000028 preferred_label three-dimensional spatial region
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_lens preferred_label fault core lens
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_proper_spatial_part_of preferred_label proper spatial part of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_displacement_indicator preferred_label slip surface structure
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:heave preferred_label heave
+http://purl.obolibrary.org/obo/RO_0001001 preferred_label derives into
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cohesion preferred_label cohesion
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_earth_material preferred_label earth material
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_spatially_disconnected_from preferred_label spatially disconnected from
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_below preferred_label below
+http://purl.obolibrary.org/obo/BFO_0000006 preferred_label spatial region
+http://purl.obolibrary.org/obo/BFO_0000023 preferred_label role
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_spatially_identical_to preferred_label spatially identical to
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_breccia preferred_label fault breccia
+http://purl.obolibrary.org/obo/BFO_0000003 preferred_label occurrent
+http://purl.obolibrary.org/obo/BFO_0000145 preferred_label relational quality
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:anastomosing preferred_label anastomosing
+http://purl.obolibrary.org/obo/BFO_0000004 preferred_label independent continuant
+http://purl.obolibrary.org/obo/BFO_0000008 preferred_label temporal region
+http://purl.obolibrary.org/obo/BFO_0000035 preferred_label process boundary
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_geological_contact preferred_label geological contact
+http://purl.obolibrary.org/obo/RO_0000086 preferred_label has quality
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:detachment_fault preferred_label detachment fault
+http://purl.obolibrary.org/obo/BFO_0000054 preferred_label realized in
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_geological_object preferred_label geological object
+http://purl.obolibrary.org/obo/BFO_0000034 preferred_label function
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:large_clasts_proportion preferred_label large clasts proportion
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_material_entity preferred_label fault volume
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:barrier preferred_label barrier
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_orientation preferred_label fault orientation
+http://purl.obolibrary.org/obo/BFO_0000051 preferred_label has part
+http://purl.obolibrary.org/obo/IAO_0000119 preferred_label definition source
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:synthetic_fault preferred_label synthetic fault
+http://purl.obolibrary.org/obo/BFO_0000144 preferred_label process profile
+http://purl.obolibrary.org/obo/RO_0000079 preferred_label function of
+http://purl.obolibrary.org/obo/IAO_0000412 preferred_label imported from
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_unconsolidated_earth_material preferred_label unconsolidated earth material
+http://purl.obolibrary.org/obo/BFO_0000050 preferred_label is part of
+http://purl.obolibrary.org/obo/BFO_0000050 preferred_label part of
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_externally_connected_with preferred_label externally connected with
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_has_non_tangential_proper_spatial_part preferred_label has non-tangential proper spatial part
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:low-angle_fault preferred_label low-angle fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#yonger_than preferred_label younger than
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_geological_time_interval preferred_label geological time interval
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_geological_process preferred_label geological process
+http://purl.obolibrary.org/obo/BFO_0000016 preferred_label disposition
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_generated_by preferred_label generated by
+http://purl.obolibrary.org/obo/RO_0000052 preferred_label characteristic of
+http://purl.obolibrary.org/obo/RO_0000052 preferred_label inheres in
+http://purl.obolibrary.org/obo/BFO_0000001 preferred_label entity
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_horse preferred_label fault horse
+http://purl.obolibrary.org/obo/RO_0000059 preferred_label concretizes
+http://purl.obolibrary.org/obo/IAO_0000112 preferred_label example of usage
+http://purl.obolibrary.org/obo/RO_0001000 preferred_label derives from
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:thrust_fault preferred_label thrust fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure preferred_label fault array structure
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_dip_direction preferred_label fault dip direction
+http://purl.obolibrary.org/obo/IAO_0000601 preferred_label has associated axiom(nl)
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#has_quality_value preferred_label has quality value
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_quality preferred_label rock quality
+http://purl.obolibrary.org/obo/BFO_0000066 preferred_label occurs in
+http://purl.obolibrary.org/obo/RO_0000091 preferred_label has disposition
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:en_echelon preferred_label en echelon
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:dip_separation preferred_label dip separation
+http://purl.obolibrary.org/obo/BFO_0000017 preferred_label realizable entity
+http://purl.obolibrary.org/obo/BFO_0000148 preferred_label zero-dimensional temporal region
+http://purl.obolibrary.org/obo/RO_0002350 preferred_label member of
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_earth_fluid preferred_label earth fluid
+http://purl.obolibrary.org/obo/BFO_0000142 preferred_label one-dimensional continuant fiat boundary
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_geological_boundary preferred_label geological boundary
+http://purl.obolibrary.org/obo/RO_0000080 preferred_label quality of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#curved_shape preferred_label curved shape
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_age_of preferred_label age of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#non-cohesive preferred_label non-cohesive
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_rock preferred_label amount of rock
+http://purl.obolibrary.org/obo/RO_0000092 preferred_label disposition of
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_mineral preferred_label amount of mineral
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:dextral_fault preferred_label dextral strike-slip fault
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_geological_structure preferred_label geological structure
+http://purl.obolibrary.org/obo/RO_0001025 preferred_label located in
+http://purl.obolibrary.org/obo/BFO_0000146 preferred_label two-dimensional continuant fiat boundary
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:conduit preferred_label conduit
+http://purl.obolibrary.org/obo/BFO_0000018 preferred_label zero-dimensional spatial region
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:conjugate preferred_label conjugate
+http://purl.obolibrary.org/obo/RO_0000087 preferred_label has role
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:nonsystematic preferred_label nonsystematic
+http://purl.obolibrary.org/obo/BFO_0000141 preferred_label immaterial entity
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:chatter_mark preferred_label chatter mark
+http://purl.obolibrary.org/obo/IAO_0000116 preferred_label editor note
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:damage_zone preferred_label damage zone
+http://purl.obolibrary.org/obo/RO_0001015 preferred_label location of
+http://purl.obolibrary.org/obo/RO_0001015 preferred_label is location of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:sinistral_fault preferred_label sinistral strike-slip fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#has_structure preferred_label has structure
+http://purl.obolibrary.org/obo/IAO_0000118 preferred_label alternative term
+http://purl.obolibrary.org/obo/IAO_0000111 preferred_label editor preferred term
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:minor_fault preferred_label minor fault
+http://purl.obolibrary.org/obo/BFO_0000182 preferred_label history
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:continuity preferred_label continuity
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:relay preferred_label relay
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:throw preferred_label throw
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#has_1D_boundary preferred_label has 1D boundary
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_has_proper_spatial_part preferred_label has proper spatial part
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:major_fault preferred_label major fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume preferred_label fault wall
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#not_smeared preferred_label not smeared
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:graben preferred_label graben
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_in_front_of preferred_label in front of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:footwall preferred_label footwall
+http://purl.obolibrary.org/obo/RO_0000081 preferred_label role of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_volume preferred_label rock volume
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst_and_graben_structure preferred_label horst and graben structure
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst preferred_label horst
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#west_of preferred_label west of
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_generically_depends_on preferred_label generically depends on
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_array_structure preferred_label fault system structure
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_constituted_by preferred_label constituted by
+http://purl.obolibrary.org/obo/RO_0004096 preferred_label DEPRECATED inheres in
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:duplex_structure preferred_label duplex structure
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:hanging_wall preferred_label hanging wall
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_rock preferred_label brittle fault rock
+http://purl.obolibrary.org/obo/RO_0000058 preferred_label is concretized as
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_non_tangential_proper_spatial_part_of preferred_label non-tangential proper spatial part of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_dip_angle preferred_label fault dip angle
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure preferred_label fault structure
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:parallel preferred_label parallel
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_behind preferred_label behind
+http://purl.obolibrary.org/obo/RO_0000053 preferred_label bearer of
+http://purl.obolibrary.org/obo/RO_0000053 preferred_label has characteristic
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_shape preferred_label fault surface shape
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:geological_deformation preferred_label geological deformation
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:smeared preferred_label smeared
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_has_age preferred_label has age
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#irregular preferred_label irregular
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#occupies preferred_label has spatial region
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:flower preferred_label flower
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_location preferred_label fault surface location
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:proto_lith preferred_label protolith role
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system preferred_label fault system
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone preferred_label fault zone
+http://purl.obolibrary.org/obo/RO_0004097 preferred_label DEPRECATED bearer of
+https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:GeologicalSpatialRelationsOntology_has_tangential_proper_spatial_part preferred_label has tangential proper spatial part
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_gouge preferred_label fault gouge
+http://purl.obolibrary.org/obo/IAO_0000232 preferred_label curator note
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_strike_azimuth preferred_label fualt strike azimuth
+http://purl.obolibrary.org/obo/BFO_0000179 preferred_label BFO OWL specification label
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#composite_shape preferred_label composite shape
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:normal_fault preferred_label normal fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:slickenside preferred_label slickenside
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:subsidiary_fault preferred_label subsidiary fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#east_of preferred_label east of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#coeval_with preferred_label coeval with
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:negative_structure preferred_label negative structure
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:permeability preferred_label permeability
+http://purl.obolibrary.org/obo/BFO_0000038 preferred_label one-dimensional temporal region
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#cohesive preferred_label cohesive
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:shear_deformation preferred_label brittle shear deformation
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#structure_of preferred_label structure of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:growth_fault preferred_label growth fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#spatial_region_of preferred_label spatial region of
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:slickenline preferred_label slickenline
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_generated_in preferred_label generated in
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_geological_age preferred_label geological age
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:barrier Reference: Caine et al.( 1996)
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:dextral_fault References: ;Van der Pluijm et al. (2004a). Fossen (2016a).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:damage_zone References: Caine et al. (1996) Billi et al. (2003), Berg and Skar (2005), Choi et al. (2016), Celestino et al. (2020).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:damage_zone Note: Researches like Kim et al. (2004), Choi et al. (2016) and Liao et al.(2020) show various anatomical views of damage zone from different perspectives and separate it into parts that have no clear physical boundaries. There is no absolute authoritative correct view of damage zone yet.
+https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:GeoCoreOntology_geological_contact There was some problem with the axiom asserting that the contanct depends on two different objects. We have to check it better.
+http://purl.obolibrary.org/obo/BFO_0000146 (iff (TwoDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (TwoDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [033-001]
+http://purl.obolibrary.org/obo/BFO_0000146 a two-dimensional continuant fiat boundary (surface) is a self-connected fiat surface whose location is defined in relation to some material entity. (axiom label in BFO2 Reference: [033-001])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_material_entity Note: the concept of Fault Volume is about the Fault Zone and its Fault Wall (hanging wall, foot wall) which has undetermined boundaries.
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_gouge Reference: Woodcock and Mort (2008).
+http://purl.obolibrary.org/obo/BFO_0000008 Every temporal region t is such that t occupies_temporal_region t. (axiom label in BFO2 Reference: [119-002])
+http://purl.obolibrary.org/obo/BFO_0000008 All parts of temporal regions are temporal regions. (axiom label in BFO2 Reference: [101-001])
+http://purl.obolibrary.org/obo/BFO_0000008 (forall (x y) (if (and (TemporalRegion x) (occurrentPartOf y x)) (TemporalRegion y))) // axiom label in BFO2 CLIF: [101-001]
+http://purl.obolibrary.org/obo/BFO_0000008 (forall (x) (if (TemporalRegion x) (Occurrent x))) // axiom label in BFO2 CLIF: [100-001]
+http://purl.obolibrary.org/obo/BFO_0000008 (forall (r) (if (TemporalRegion r) (occupiesTemporalRegion r r))) // axiom label in BFO2 CLIF: [119-002]
+http://purl.obolibrary.org/obo/BFO_0000008 A temporal region is an occurrent entity that is part of time as defined relative to some reference frame. (axiom label in BFO2 Reference: [100-001])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core References: Caine et al.( 1996), Shipton et al. (2006), Wibberley et al.( 2008), Faulkner et al. (2010);, Torabi et al. (2019).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:oblique_fault Reference Van der Pluijm et al. (2004a)).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:antithetic_fault Reference: Van der Pluijm et al. (2004a)
+http://purl.obolibrary.org/obo/BFO_0000034 A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])
+http://purl.obolibrary.org/obo/BFO_0000034 (forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_horse Reference: Groshong Jr (2006).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_horse Note: Gabrielsen et al (2017) and Lindager et al (2007) condiderv that “Lens” and “Horse” are interchangeable terms for designating parts of FaultCore. However, in the context of duplex structure ,the term “horse” is used with another meaning . We have defined the term ‘Fault Horse” according ti this lattere meaning
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:minor_fault Refrences: Song and Cawood ( 2001), Nishiwaki and Lin (2019)
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:minor_fault synonym: Subsidiary fault, Spaly fault
+http://purl.obolibrary.org/obo/BFO_0000004 For every independent continuant b and time t during the region of time spanned by its life, there are entities which s-depends_on b during t. (axiom label in BFO2 Reference: [018-002])
+http://purl.obolibrary.org/obo/BFO_0000004 (forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001]
+http://purl.obolibrary.org/obo/BFO_0000004 (forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002]
+http://purl.obolibrary.org/obo/BFO_0000004 (iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002]
+http://purl.obolibrary.org/obo/BFO_0000004 For any independent continuant b and any time t there is some spatial region r such that b is located_in r at t. (axiom label in BFO2 Reference: [134-001])
+http://purl.obolibrary.org/obo/BFO_0000004 A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.
+http://purl.obolibrary.org/obo/BFO_0000027 b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])
+http://purl.obolibrary.org/obo/BFO_0000027 (forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:deformation_band_object References: Shipton et al., (2005), Fossen et al.(2007);-, Torabi et al., (2021).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst References: Van der Pluijm et al. (2004a), Davis et al., (2011), Fossen (2016a)
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_breccia Reference: Woodcock and Mort (2008).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:growth_fault References: Kuecher et al. (2001), Baudon and Cartwright (2008).
+http://purl.obolibrary.org/obo/BFO_0000148 temporal instant.
+http://purl.obolibrary.org/obo/BFO_0000148 A zero-dimensional temporal region is a temporal region that is without extent. (axiom label in BFO2 Reference: [102-001])
+http://purl.obolibrary.org/obo/BFO_0000148 (forall (x) (if (ZeroDimensionalTemporalRegion x) (TemporalRegion x))) // axiom label in BFO2 CLIF: [102-001]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:proto_lith References: Rowley et al. (1997). Hoskin and Black (2000)
+http://purl.obolibrary.org/obo/BFO_0000011 (forall (x) (if (SpatioTemporalRegion x) (exists (y) (and (TemporalRegion y) (temporallyProjectsOnto x y))))) // axiom label in BFO2 CLIF: [098-001]
+http://purl.obolibrary.org/obo/BFO_0000011 Each spatiotemporal region projects_onto some temporal region. (axiom label in BFO2 Reference: [098-001])
+http://purl.obolibrary.org/obo/BFO_0000011 (forall (x t) (if (SpatioTemporalRegion x) (exists (y) (and (SpatialRegion y) (spatiallyProjectsOntoAt x y t))))) // axiom label in BFO2 CLIF: [099-001]
+http://purl.obolibrary.org/obo/BFO_0000011 Each spatiotemporal region at any time t projects_onto some spatial region at t. (axiom label in BFO2 Reference: [099-001])
+http://purl.obolibrary.org/obo/BFO_0000011 (forall (x) (if (SpatioTemporalRegion x) (Occurrent x))) // axiom label in BFO2 CLIF: [095-001]
+http://purl.obolibrary.org/obo/BFO_0000011 (forall (x y) (if (and (SpatioTemporalRegion x) (occurrentPartOf y x)) (SpatioTemporalRegion y))) // axiom label in BFO2 CLIF: [096-001]
+http://purl.obolibrary.org/obo/BFO_0000011 All parts of spatiotemporal regions are spatiotemporal regions. (axiom label in BFO2 Reference: [096-001])
+http://purl.obolibrary.org/obo/BFO_0000011 Every spatiotemporal region s is such that s occupies_spatiotemporal_region s. (axiom label in BFO2 Reference: [107-002])
+http://purl.obolibrary.org/obo/BFO_0000011 A spatiotemporal region is an occurrent entity that is part of spacetime. (axiom label in BFO2 Reference: [095-001])
+http://purl.obolibrary.org/obo/BFO_0000011 Every spatiotemporal region occupies_spatiotemporal_region itself.
+http://purl.obolibrary.org/obo/BFO_0000011 (forall (r) (if (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion r r))) // axiom label in BFO2 CLIF: [107-002]
+http://purl.obolibrary.org/obo/BFO_0000026 A one-dimensional spatial region is a line or aggregate of lines stretching from one point in space to another. (axiom label in BFO2 Reference: [038-001])
+http://purl.obolibrary.org/obo/BFO_0000026 (forall (x) (if (OneDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [038-001]
+http://purl.obolibrary.org/obo/BFO_0000182 A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by a material entity or site, including processes on the surface of the entity or within the cavities to which it serves as host. (axiom label in BFO2 Reference: [138-001])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:synthetic_fault Reference: Van der Pluijm et al. (2004a)
+http://purl.obolibrary.org/obo/BFO_0000040 A material entity is an independent continuant that has some portion of matter as proper or improper continuant part. (axiom label in BFO2 Reference: [019-002])
+http://purl.obolibrary.org/obo/BFO_0000040 Every entity which has a material entity as continuant part is a material entity. (axiom label in BFO2 Reference: [020-002])
+http://purl.obolibrary.org/obo/BFO_0000040 every entity of which a material entity is continuant part is also a material entity. (axiom label in BFO2 Reference: [021-002])
+http://purl.obolibrary.org/obo/BFO_0000040 (forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002]
+http://purl.obolibrary.org/obo/BFO_0000040 (forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002]
+http://purl.obolibrary.org/obo/BFO_0000040 (forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rotation_fault Reference Van der Pluijm et al. (2004a)).
+http://purl.obolibrary.org/obo/BFO_0000017 (forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002]
+http://purl.obolibrary.org/obo/BFO_0000017 All realizable dependent continuants have independent continuants that are not spatial regions as their bearers. (axiom label in BFO2 Reference: [060-002])
+http://purl.obolibrary.org/obo/BFO_0000017 To say that b is a realizable entity is to say that b is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region and is of a type instances of which are realized in processes of a correlated type. (axiom label in BFO2 Reference: [058-002])
+http://purl.obolibrary.org/obo/BFO_0000017 (forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:physical_slip_surface References: Davis et al., (2011a); Shipton et al., (2006); Watterson, (1986).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation References: Van der Pluijm et al., (2004a), Davis et al., (2011).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:large_clasts_proportion Reference: Woodcock and Mort ( 2008)).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_rock References: Sibson (1977); Brodie et al. (2007), Woodcock and Mort (2008).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:thrust_fault References : Van der Pluijm et al. (2004a), Davis et al. (2011), Fossen (2016a).
+http://purl.obolibrary.org/obo/BFO_0000142 (iff (OneDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (OneDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [032-001]
+http://purl.obolibrary.org/obo/BFO_0000142 a one-dimensional continuant fiat boundary is a continuous fiat line whose location is defined in relation to some material entity. (axiom label in BFO2 Reference: [032-001])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:smeared Values: Is Smeared, Not Smeared
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:smeared Reference: Braathen et al. (2009).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:smeared Note: the mechanisms of the smearing process such as normal stress increase, water content of clay increase, change of the shear strength of clay are not considered in the scope of this ontology work (Schmatz et al., 2010; Vrolijk et al., 2016).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_array_structure Reference : Van der Pluijm et al. (2004a)
+http://purl.obolibrary.org/obo/BFO_0000147 (iff (ZeroDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (ZeroDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [031-001]
+http://purl.obolibrary.org/obo/BFO_0000147 a zero-dimensional continuant fiat boundary is a fiat point whose location is defined in relation to some material entity. (axiom label in BFO2 Reference: [031-001])
+http://purl.obolibrary.org/obo/BFO_0000024 (forall (x) (if (FiatObjectPart x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y) (and (Object y) (properContinuantPartOfAt x y t)))))))) // axiom label in BFO2 CLIF: [027-004]
+http://purl.obolibrary.org/obo/BFO_0000024 b is a fiat object part = Def. b is a material entity which is such that for all times t, if b exists at t then there is some object c such that b proper continuant_part of c at t and c is demarcated from the remainder of c by a two-dimensional continuant fiat boundary. (axiom label in BFO2 Reference: [027-004])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:hanging_wall Hanging Wall: a role that is role_of some Fault Wall located above the Fault Surface to which it is related.
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:hanging_wall References: Van der Pluijm et al., (2004a), Davis et al., (2011).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:low-angle_fault Reference Van der Pluijm et al. (2004a)).
+http://purl.obolibrary.org/obo/BFO_0000003 An occurrent is an entity that unfolds itself in time or it is the instantaneous boundary of such an entity (for example a beginning or an ending) or it is a temporal or spatiotemporal region which such an entity occupies_temporal_region or occupies_spatiotemporal_region. (axiom label in BFO2 Reference: [077-002])
+http://purl.obolibrary.org/obo/BFO_0000003 Every occurrent occupies_spatiotemporal_region some spatiotemporal region. (axiom label in BFO2 Reference: [108-001])
+http://purl.obolibrary.org/obo/BFO_0000003 (forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001]
+http://purl.obolibrary.org/obo/BFO_0000003 b is an occurrent entity iff b is an entity that has temporal parts. (axiom label in BFO2 Reference: [079-001])
+http://purl.obolibrary.org/obo/BFO_0000003 (forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure References: Torabi and Berg (2011), Fossen (2020).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:sinistral_fault References: ;Van der Pluijm et al. (2004a). Fossen (2016a).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cataclasite Reference: Woodcock and Mort (2008).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:shear_deformation References: Sibson (1977); Van der Pluijm et al. (2004b), Fossen (2016b).
+http://purl.obolibrary.org/obo/BFO_0000038 (forall (x) (if (OneDimensionalTemporalRegion x) (TemporalRegion x))) // axiom label in BFO2 CLIF: [103-001]
+http://purl.obolibrary.org/obo/BFO_0000038 A one-dimensional temporal region is a temporal region that is extended. (axiom label in BFO2 Reference: [103-001])
+http://purl.obolibrary.org/obo/BFO_0000016 If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])
+http://purl.obolibrary.org/obo/BFO_0000016 (forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002]
+http://purl.obolibrary.org/obo/BFO_0000016 (forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002]
+http://purl.obolibrary.org/obo/BFO_0000016 b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:continuity Value:Continuous, Seimicontinuous.
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:continuity Reference: Braathen et al. (2009).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_membrane Reference: Braathen et al., (2009).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cohesion Reference: Brodie et al. (2007).
+http://purl.obolibrary.org/obo/BFO_0000145 (iff (RelationalQuality a) (exists (b c t) (and (IndependentContinuant b) (IndependentContinuant c) (qualityOfAt a b t) (qualityOfAt a c t)))) // axiom label in BFO2 CLIF: [057-001]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure Reference : Van der Pluijm et al. (2004a).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_displacement_indicator References : Van der Pluijm et al. (2004a), Davis et al., (2011).
+http://purl.obolibrary.org/obo/BFO_0000030 b is an object means: b is a material entity which manifests causal unity of one or other of the types CUn listed above & is of a type (a material universal) instances of which are maximal relative to this criterion of causal unity. (axiom label in BFO2 Reference: [024-001])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_shape Value: Planar, Listric, Composite, Irregular.
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:geological_deformation Reference: Fossen (2016b).
+http://purl.obolibrary.org/obo/BFO_0000018 A zero-dimensional spatial region is a point in space. (axiom label in BFO2 Reference: [037-001])
+http://purl.obolibrary.org/obo/BFO_0000018 (forall (x) (if (ZeroDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [037-001]
+http://purl.obolibrary.org/obo/BFO_0000020 A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.
+http://purl.obolibrary.org/obo/BFO_0000020 (iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:permeability References: Ahmed et al. (1991), Bjorlykke (2010).
+http://purl.obolibrary.org/obo/BFO_0000001 An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:normal_fault References : Van der Pluijm et al. (2004a), Davis et al. (2011), Fossen (2016a).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone Reference: Caine et al., (1996), Torabi and Berg, (2011),Fossen, (2020).
+http://purl.obolibrary.org/obo/BFO_0000140 (iff (ContinuantFiatBoundary a) (and (ImmaterialEntity a) (exists (b) (and (or (ZeroDimensionalSpatialRegion b) (OneDimensionalSpatialRegion b) (TwoDimensionalSpatialRegion b)) (forall (t) (locatedInAt a b t)))) (not (exists (c t) (and (SpatialRegion c) (continuantPartOfAt c a t)))))) // axiom label in BFO2 CLIF: [029-001]
+http://purl.obolibrary.org/obo/BFO_0000140 Every continuant fiat boundary is located at some spatial region at every time at which it exists
+http://purl.obolibrary.org/obo/BFO_0000035 (forall (x) (if (ProcessBoundary x) (exists (y) (and (ZeroDimensionalTemporalRegion y) (occupiesTemporalRegion x y))))) // axiom label in BFO2 CLIF: [085-002]
+http://purl.obolibrary.org/obo/BFO_0000035 (iff (ProcessBoundary a) (exists (p) (and (Process p) (temporalPartOf a p) (not (exists (b) (properTemporalPartOf b a)))))) // axiom label in BFO2 CLIF: [084-001]
+http://purl.obolibrary.org/obo/BFO_0000035 Every process boundary occupies_temporal_region a zero-dimensional temporal region. (axiom label in BFO2 Reference: [085-002])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:footwall References: Van der Pluijm et al., (2004a). Davis et al., (2011).
+http://purl.obolibrary.org/obo/BFO_0000028 A three-dimensional spatial region is a spatial region that is of three dimensions. (axiom label in BFO2 Reference: [040-001])
+http://purl.obolibrary.org/obo/BFO_0000028 (forall (x) (if (ThreeDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [040-001]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:strike-slip_fault References : Van der Pluijm et al. (2004a), Davis et al. (2011), Fossen (2016a).
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_lens Note: It often has a diamond shaped shape located inside the fault core. It corresponds to a portion of rock ripped off from a fault wall or fault core by shear slip surfaces.
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_lens References; Lindanger et al. (2007), Braathen et al. (2009), Gabrielsen et al., (2017)
+http://purl.obolibrary.org/obo/BFO_0000031 A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time.
+http://purl.obolibrary.org/obo/BFO_0000031 (iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001]
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:conduit Reference: Caine et al.( 1996)
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:major_fault synonym: main fault, first order faultc, principle fault
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:major_fault Reference: Van der Pluijm et al. (2004a)
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:graben References: Van der Pluijm et al. (2004a), Davis et al., (2011), Fossen (2016a)
+http://purl.obolibrary.org/obo/BFO_0000019 If an entity is a quality at any time that it exists, then it is a quality at every time that it exists. (axiom label in BFO2 Reference: [105-001])
+http://purl.obolibrary.org/obo/BFO_0000019 a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])
+http://purl.obolibrary.org/obo/BFO_0000019 (forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001]
+http://purl.obolibrary.org/obo/BFO_0000019 (forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001]
+http://purl.obolibrary.org/obo/BFO_0000015 An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.
+http://purl.obolibrary.org/obo/BFO_0000015 (iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003]
+http://purl.obolibrary.org/obo/BFO_0000029 (forall (x) (if (Site x) (ImmaterialEntity x))) // axiom label in BFO2 CLIF: [034-002]
+http://purl.obolibrary.org/obo/BFO_0000029 b is a site means: b is a three-dimensional immaterial entity that is (partially or wholly) bounded by a material entity or it is a three-dimensional immaterial part thereof. (axiom label in BFO2 Reference: [034-002])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:reverse_fault References : Van der Pluijm et al. (2004a), Davis et al. (2011), Fossen (2016a).
+http://purl.obolibrary.org/obo/BFO_0000023 (forall (x) (if (Role x) (RealizableEntity x))) // axiom label in BFO2 CLIF: [061-001]
+http://purl.obolibrary.org/obo/BFO_0000023 b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be& b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed. (axiom label in BFO2 Reference: [061-001])
+http://purl.obolibrary.org/obo/BFO_0000002 (forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002]
+http://purl.obolibrary.org/obo/BFO_0000002 if b is a continuant and if, for some t, c has_continuant_part b at t, then c is a continuant. (axiom label in BFO2 Reference: [126-001])
+http://purl.obolibrary.org/obo/BFO_0000002 (forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002]
+http://purl.obolibrary.org/obo/BFO_0000002 if b is a material entity, then there is some temporal interval (referred to below as a one-dimensional temporal region) during which b exists. (axiom label in BFO2 Reference: [011-002])
+http://purl.obolibrary.org/obo/BFO_0000002 (forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002]
+http://purl.obolibrary.org/obo/BFO_0000002 A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity. (axiom label in BFO2 Reference: [008-002])
+http://purl.obolibrary.org/obo/BFO_0000002 (forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001]
+http://purl.obolibrary.org/obo/BFO_0000002 if b is a continuant and if, for some t, cis continuant_part of b at t, then c is a continuant. (axiom label in BFO2 Reference: [009-002])
+http://purl.obolibrary.org/obo/BFO_0000009 A two-dimensional spatial region is a spatial region that is of two dimensions. (axiom label in BFO2 Reference: [039-001])
+http://purl.obolibrary.org/obo/BFO_0000009 (forall (x) (if (TwoDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [039-001]
+http://purl.obolibrary.org/obo/BFO_0000006 A spatial region is a continuant entity that is a continuant_part_of spaceR as defined relative to some frame R. (axiom label in BFO2 Reference: [035-001])
+http://purl.obolibrary.org/obo/BFO_0000006 (forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001]
+http://purl.obolibrary.org/obo/BFO_0000006 (forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001]
+http://purl.obolibrary.org/obo/BFO_0000006 All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:detachment_fault References : Van der Pluijm et al. (2004a), Davis et al. (2011).
+http://purl.obolibrary.org/obo/BFO_0000144 (forall (x y) (if (processProfileOf x y) (and (properContinuantPartOf x y) (exists (z t) (and (properOccurrentPartOf z y) (TemporalRegion t) (occupiesSpatioTemporalRegion x t) (occupiesSpatioTemporalRegion y t) (occupiesSpatioTemporalRegion z t) (not (exists (w) (and (occurrentPartOf w x) (occurrentPartOf w z))))))))) // axiom label in BFO2 CLIF: [094-005]
+http://purl.obolibrary.org/obo/BFO_0000144 (iff (ProcessProfile a) (exists (b) (and (Process b) (processProfileOf a b)))) // axiom label in BFO2 CLIF: [093-002]
+http://purl.obolibrary.org/obo/BFO_0000144 b process_profile_of c holds when b proper_occurrent_part_of c& there is some proper_occurrent_part d of c which has no parts in common with b & is mutually dependent on b& is such that b, c and d occupy the same temporal region (axiom label in BFO2 Reference: [094-005])
+http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:relay_damage_zone References: Childs et al., (1995), Groshong Jr, (2006), Davis et al.,(2011)

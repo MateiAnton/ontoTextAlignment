@@ -1,0 +1,1258 @@
+@prefix ns1: <http://purl.obolibrary.org/obo/> .
+@prefix ns2: <https://www.inf.ufrgs.br/bdi/ontologies/geologicalspatialrelationsontology#UFRGS:> .
+@prefix ns3: <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#> .
+@prefix ns4: <https://www.inf.ufrgs.br/bdi/ontologies/geocoreontology#UFRGS:> .
+@prefix owl2vec: <http://www.semanticweb.org/owl2vec#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:BFO_0000050 rdfs:label "part of"@en ;
+    ns1:IAO_0000111 "is part of"@en ;
+    ns1:IAO_0000118 "part_of"@en .
+
+ns1:BFO_0000051 rdfs:label "has part"@en ;
+    ns1:IAO_0000111 "has part"@en ;
+    ns1:IAO_0000118 "has_part"@en .
+
+ns1:BFO_0000054 rdfs:label "realized in"@en ;
+    ns1:IAO_0000111 "realized in"@en ;
+    ns1:IAO_0000118 "is realized by"@en,
+        "realized_in"@en ;
+    ns1:IAO_0000600 "[copied from inverse property 'realizes'] to say that b realizes c at t is to assert that there is some material entity d & b is a process which has participant d at t & c is a disposition or role of which d is bearer_of at t& the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])"@en ;
+    rdfs:comment "Paraphrase of elucidation: a relation between a realizable entity and a process, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process"^^xsd:string .
+
+ns1:BFO_0000055 rdfs:label "realizes"@en ;
+    ns1:IAO_0000111 "realizes"@en ;
+    ns1:IAO_0000600 "to say that b realizes c at t is to assert that there is some material entity d & b is a process which has participant d at t & c is a disposition or role of which d is bearer_of at t& the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])"@en ;
+    rdfs:comment "Paraphrase of elucidation: a relation between a process and a realizable entity, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process"^^xsd:string .
+
+ns1:BFO_0000066 rdfs:label "occurs in"@en ;
+    ns1:IAO_0000111 "occurs in"@en ;
+    ns1:IAO_0000118 "occurs_in"@en,
+        "unfolds in"@en,
+        "unfolds_in"@en ;
+    rdfs:comment "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant"^^xsd:string .
+
+ns1:BFO_0000067 rdfs:label "contains process"@en ;
+    ns1:IAO_0000111 "site of"@en ;
+    rdfs:comment "Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant"^^xsd:string .
+
+ns1:BFO_0000179 rdfs:label "BFO OWL specification label"@en .
+
+ns1:BFO_0000180 rdfs:label "BFO CLIF specification label"@en .
+
+ns1:IAO_0000111 rdfs:label "editor preferred term"@en .
+
+ns1:IAO_0000112 rdfs:label "example of usage"@en .
+
+ns1:IAO_0000116 rdfs:label "editor note"@en .
+
+ns1:IAO_0000117 rdfs:label "term editor"@en .
+
+ns1:IAO_0000118 rdfs:label "alternative term"@en .
+
+ns1:IAO_0000119 rdfs:label "definition source"@en .
+
+ns1:IAO_0000232 rdfs:label "curator note"@en .
+
+ns1:IAO_0000412 rdfs:label "imported from"@en .
+
+ns1:IAO_0000600 rdfs:label "elucidation"@en .
+
+ns1:IAO_0000601 rdfs:label "has associated axiom(nl)"@en .
+
+ns1:IAO_0000602 rdfs:label "has associated axiom(fol)"@en .
+
+ns1:IAO_0010000 rdfs:label "has axiom label"@en .
+
+ns1:RO_0000052 rdfs:label "characteristic of"@en ;
+    ns1:IAO_0000111 "inheres in"@en ;
+    ns1:IAO_0000118 "inheres_in"@en ;
+    rdfs:comment "Note that this relation was previously called \"inheres in\", but was changed to be called \"characteristic of\" because BFO2 uses \"inheres in\" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing."^^xsd:string .
+
+ns1:RO_0000053 rdfs:label "has characteristic"@en ;
+    ns1:IAO_0000111 "bearer of"@en ;
+    ns1:IAO_0000118 "bearer_of"@en,
+        "is bearer of"@en .
+
+ns1:RO_0000056 rdfs:label "participates in"@en ;
+    ns1:IAO_0000111 "participates in"@en ;
+    ns1:IAO_0000118 "participates_in"@en .
+
+ns1:RO_0000057 rdfs:label "has participant"@en ;
+    ns1:IAO_0000111 "has participant"@en ;
+    ns1:IAO_0000118 "has_participant"@en .
+
+ns1:RO_0000058 rdfs:label "is concretized as"@en .
+
+ns1:RO_0000059 rdfs:label "concretizes"@en .
+
+ns1:RO_0000079 rdfs:label "function of"@en ;
+    ns1:IAO_0000118 "function_of"@en,
+        "is function of"@en ;
+    rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020."^^xsd:string .
+
+ns1:RO_0000080 rdfs:label "quality of"@en ;
+    ns1:IAO_0000118 "is quality of"@en,
+        "quality_of"@en ;
+    rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020."^^xsd:string .
+
+ns1:RO_0000081 rdfs:label "role of"@en ;
+    ns1:IAO_0000118 "is role of"@en,
+        "role_of"@en ;
+    rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020."^^xsd:string .
+
+ns1:RO_0000085 rdfs:label "has function"@en ;
+    ns1:IAO_0000118 "has_function"@en .
+
+ns1:RO_0000086 rdfs:label "has quality"@en ;
+    ns1:IAO_0000118 "has_quality"@en .
+
+ns1:RO_0000087 rdfs:label "has role"@en ;
+    ns1:IAO_0000118 "has_role"@en .
+
+ns1:RO_0000091 rdfs:label "has disposition"@en .
+
+ns1:RO_0000092 rdfs:label "disposition of"@en ;
+    rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020."^^xsd:string .
+
+ns1:RO_0001000 rdfs:label "derives from"@en ;
+    ns1:IAO_0000118 "derives_from"@en .
+
+ns1:RO_0001001 rdfs:label "derives into"@en ;
+    ns1:IAO_0000118 "derives_into"@en .
+
+ns1:RO_0001015 rdfs:label "location of"@en ;
+    ns1:IAO_0000111 "is location of"@en ;
+    ns1:IAO_0000118 "location_of"@en .
+
+ns1:RO_0001025 rdfs:label "located in"@en ;
+    ns1:IAO_0000111 "located in"@en ;
+    ns1:IAO_0000118 "located_in"@en .
+
+ns1:RO_0002000 rdfs:label "2D boundary of"@en ;
+    ns1:IAO_0000118 "2D_boundary_of"@en,
+        "boundary of"@en,
+        "is 2D boundary of"@en,
+        "is boundary of"@en .
+
+ns1:RO_0002002 rdfs:label "has 2D boundary"@en ;
+    ns1:IAO_0000118 "has boundary"@en,
+        "has_2D_boundary"@en .
+
+ns1:RO_0002350 rdfs:label "member of"@en ;
+    ns1:IAO_0000118 "is member of"^^xsd:string,
+        "member part of"^^xsd:string .
+
+ns1:RO_0002351 rdfs:label "has member"@en .
+
+ns1:RO_0004096 rdfs:label "DEPRECATED inheres in"@en ;
+    rdfs:comment "DEPRECATED This relation is similar to but different in important respects to the characteristic-of relation. See comments on that relation for more information."^^xsd:string .
+
+ns1:RO_0004097 rdfs:label "DEPRECATED bearer of"@en .
+
+<http://www.semanticweb.org/jieyingchen/ontologies/2023/12> rdfs:comment "This BFO 2.0 version represents a major update to BFO and is not strictly backwards compatible with BFO 1.1. The previous OWL version of BFO, version 1.1.1 will remain available at http://ifomis.org/bfo/1.1 and will no longer be updated. The BFO 2.0 OWL is a classes-only specification. The incorporation of core relations has been held over for a later version."^^xsd:string,
+        """About this ontology:
+GeoFault, resting on the Basic Formal Ontology BFO  and GeoCore. It models the knowledge related to geological faults.
+The GeoFault ontology covers the core knowledge of faults “strico sensu”, excluding ductile shear deformations. This considered vocabulary is essentially descriptive and related to regional to outcrop scales, excluding microscopic, orogenic, and tectonic plate structures. 
+The work of GeoFault provides a solid framework for disambiguating fault knowledge and a foundation of fault data integration for the applications and the users."""@en,
+        """Acknowledgement:
+This work is supported by the Norwegian Research Council via PeTWIN (294600) and SIRIUS (237898)."""@en,
+        "Please see the project site https://github.com/BFO-ontology/BFO, the bfo2 owl discussion group http://groups.google.com/group/bfo-owl-devel, the bfo2 discussion group http://groups.google.com/group/bfo-devel, the tracking google doc http://goo.gl/IlrEE, and the current version of the bfo2 reference http://purl.obolibrary.org/obo/bfo/dev/bfo2-reference.docx. This ontology is generated from a specification at https://github.com/BFO-ontology/BFO/tree/master/src/ontology/owl-group/specification/ and with the code that generates the OWL version in https://github.com/BFO-ontology/BFO/tree/master/src/tools/. A very early version of BFO version 2 in CLIF is at http://purl.obolibrary.org/obo/bfo/dev/bfo.clif."@en,
+        """References:
+
+-Ahmed, U., Crary, S.F., Coates, G.R., 1991. Permeability Estimation: The Various Sources and Their Interrelationships. Journal of Petroleum Technology 43, 578–587. https://doi.org/10.2118/19604-PA
+-Aydin, A., 1978. Small Faults Formed as Deformation Bands in Sandstone, in: -Byerlee, J.D., Wyss, M. (Eds.), Rock Friction and Earthquake Prediction, Contributions to Current Research in Geophysics (CCRG). Birkhäuser, Basel, pp. 913–930. https://doi.org/10.1007/978-3-0348-7182-2_22
+-Baudon, C., Cartwright, J., 2008. Early stage evolution of growth faults: 3D seismic insights from the Levant Basin, Eastern Mediterranean. Journal of Structural Geology 30, 888–898. https://doi.org/10.1016/j.jsg.2008.02.019
+-Berg, S.S., Skar, T., 2005. Controls on damage zone asymmetry of a normal fault zone: outcrop analyses of a segment of the Moab fault, SE Utah. Journal of Structural Geology 27, 1803–1822. https://doi.org/10.1016/j.jsg.2005.04.012
+-Billi, A., Salvini, F., Storti, F., 2003. The damage zone-fault core transition in carbonate rocks: implications for fault growth, structure and permeability. Journal of Structural geology 25, 1779–1794.
+-Bjorlykke, K., 2010. Petroleum geoscience: From sedimentary environments to rock physics. Springer Science & Business Media.
+-Braathen, A., Tveranger, J., Fossen, H., Skar, T., Cardozo, N., Semshaug, S.E., -Bastesen, E., Sverdrup, E., 2009. Fault facies and its application to sandstone reservoirs. AAPG bulletin 93, 891–917.
+-Brodie, K., Fettes, D., Harte, B., Schmid, R., 2007. Structural terms including fault rock terms. Recommendations by the IUGS Subcommission.
+-Caine, J.S., Evans, J.P., Forster, C.B., 1996. Fault zone architecture and permeability structure. Geology 24, 1025–1028.
+-Celestino, M.A.L., Miranda, T.S. de, Mariano, G., Alencar, M. de L., Carvalho, B.R.B.M. de, Falcão, T. da C., Topan, J.G., Barbosa, J.A., Gomes, I.F., 2020. Fault damage zones width: Implications for the tectonic evolution of the northern border of the Araripe Basin, Brazil, NE Brazil. Journal of Structural Geology 138, 104116. https://doi.org/10.1016/j.jsg.2020.104116
+-Childs, C., Watterson, J., Walsh, J.J., 1996. A model for the structure and development of fault zones. Journal of the Geological Society 153, 337–340.
+-Childs, C., Watterson, J., Walsh, J.J., 1995. Fault overlap zones within developing normal fault systems. Journal of the Geological Society 152, 535–549.
+-Choi, J.-H., Edwards, P., Ko, K., Kim, Y.-S., 2016. Definition and classification of fault damage zones: A review and a new methodological approach. Earth-Science Reviews 152, 70–87.
+-Davis, G.H., Reynolds, S.J., Kluth, C.F., 2011a. Chapter 6 - Faults, in: Structural Geology of Rocks and Regions. John Wiley & Sons, pp. 249–343..
+-Faulkner, D.R., Jackson, C.A.L., Lunn, R.J., Schlische, R.W., Shipton, Z.K., -Wibberley, C.A.J., Withjack, M.O., 2010. A review of recent developments concerning the structure, mechanics and fluid flow properties of fault zones. Journal of Structural Geology, Fault Zones 32, 1557–1575. https://doi.org/10.1016/j.jsg.2010.06.009
+-Fossen, H., 2020. Chapter 8 - Fault classification, fault growth and displacement, in: Scarselli, N., Adam, J., Chiarella, D., Roberts, D.G., Bally, A.W. (Eds.), Regional Geology and Tectonics (Second Edition). Elsevier, pp. 119–147. https://doi.org/10.1016/B978-0-444-64134-2.00007-9
+-Fossen, H., 2016a. Chapter 9 - Faults, in: Structural Geology. Cambridge university press, pp. 177–216.
+-Fossen, H., 2016b. Chapter 2 - Deformation, in: Structural Geology. Cambridge university press, pp. 25–55.
+-Fossen, H., Schultz, R.A., Shipton, Z.K., Mair, K., 2007. Deformation bands in sandstone: a review. Journal of the Geological Society 164, 755–769.
+-Gabrielsen, R.H., Braathen, A., Kjemperud, M., Valdresbråten, M.L.R., 2017. The geometry and dimensions of fault-core lenses. Geological Society, London, Special Publications 439, 249–269.
+-Groshong Jr, R.H., 2006. 3-D Structural Geology: A Practical Guide to Quantitative Surface and Subsurface Map Interpretation, 2nd ed. Springer Berlin, Heidelberg.
+-Hoskin, P. w. o., Black, L. p., 2000. Metamorphic zircon formation by solid-state recrystallization of protolith igneous zircon. Journal of Metamorphic Geology 18, 423–439. https://doi.org/10.1046/j.1525-1314.2000.00266.x
+-Kim, Y.-S., Peacock, D.C.P., Sanderson, D.J., 2004. Fault damage zones. Journal of Structural Geology 26, 503–517. https://doi.org/10.1016/j.jsg.2003.08.002
+-Kuecher, G.J., Roberts, H.H., Thompson, M.D., Matthews, I., 2001. Evidence for active growth faulting in the Terrebonne delta plain, south Louisiana: Implications for wetland loss and the vertical migration of petroleum. Environmental Geosciences 8, 77–94.
+-Liao, Z., Hu, L., Huang, X., Carpenter, B.M., Marfurt, K.J., Vasileva, S., Zhou, Y., 2020. Characterizing damage zones of normal faults using seismic variance in the Wangxuzhuang oilfield, China. Interpretation 8, SP53–SP60.
+-Lindanger, M., Gabrielsen, R.H., Braathen, A., 2007. Analysis of rock lenses in extensional faults. Norwegian Journal of Geology/Norsk Geologisk Forening 87.
+-Nishiwaki, T., Lin, A., 2019. Fractures and Subsidiary Faults Developed in the Active Strike-Slip Nojima Fault Zone, Japan, and Tectonic Implications. Tectonics 38, 4290–4300. https://doi.org/10.1029/2018TC005391
+-Rowley, D.B., Xue, F., Tucker, R.D., Peng, Z.X., Baker, J., Davis, A., 1997. Ages of ultrahigh pressure metamorphism and protolith orthogneisses from the eastern Dabie Shan: U/Pb zircon geochronology. Earth and Planetary Science Letters 151, 191–203. https://doi.org/10.1016/S0012-821X(97)81848-1
+-Schmatz, J., Vrolijk, P.J., Urai, J.L., 2010. Clay smear in normal fault zones–The effect of multilayers and clay cementation in water-saturated model experiments. Journal of Structural Geology 32, 1834–1849.
+-Shipton, Z.K., Evans, J.P., Thompson, L.B., 2005. The geometry and thickness of deformation-band fault core and its influence on sealing characteristics of deformation-band fault zones. 
+-Shipton, Z.K., Soden, A.M., Kirkpatrick, J.D., Bright, A.M., Lunn, R.J., 2006. How thick is a fault? Fault displacement-thickness scaling revisited.
+-Sibson, R.H., 1977. Fault rocks and fault mechanisms. Journal of the Geological Society 133, 191–213.
+-Song, T., Cawood, P.A., 2001. Effects of Subsidiary Faults on the Geometric Construction of Listric Normal Fault Systems. AAPG Bulletin 85, 221–232. https://doi.org/10.1306/8626C7A3-173B-11D7-8645000102C1865D
+-Torabi, A., Balsamo, F., Nogueira, F.C.C., Vasconcelos, D.L., Silva, A.C.E., Bezerra, F.H.R., Souza, J.A.B., 2021. Variation of thickness, internal structure and petrophysical properties in a deformation band fault zone in siliciclastic rocks. Marine and Petroleum Geology 133, 105297. https://doi.org/10.1016/j.marpetgeo.2021.105297
+-Torabi, A., Berg, S.S., 2011. Scaling of fault attributes: A review. Marine and Petroleum Geology 28, 1444–1460. https://doi.org/10.1016/j.marpetgeo.2011.04.003
+-Torabi, A., Johannessen, M.U., Ellingsen, T.S.S., 2019. Fault Core Thickness: Insights from Siliciclastic and Carbonate Rocks. Geofluids 2019, e2918673. https://doi.org/10.1155/2019/2918673
+-Van der Pluijm, B.A., Marshak, S., Allmendinger, R.W., 2004a. Chapter 8 - Faults and Faulting, in: Earth Structure: An Introduction to Structural Geology and Tectonics. W.W. Norton, pp. 166–202.
+-Van der Pluijm, B.A., Marshak, S., Allmendinger, R.W., 2004b. Chapter 4 - Deformation and Strain, in: Earth Structure: An Introduction to Structural Geology and Tectonics. W.W. Norton, pp. 62–89.
+-Vrolijk, P.J., Urai, J.L., Kettermann, M., 2016. Clay smear: Review of mechanisms and applications. Journal of Structural Geology 86, 95–152. https://doi.org/10.1016/j.jsg.2015.09.006
+-Watterson, J., 1986. Fault dimensions, displacements and growth. Pure and Applied Geophysics 124, 365–373.
+Wibberley, C.A., Yielding, G., Di Toro, G., 2008. Recent advances in the understanding of fault zone internal structure: a review. Geological Society, -London, Special Publications 299, 5–33.
+-Woodcock, N.H., Mort, K., 2008. Classification of fault breccias and related fault rocks. Geological Magazine 145, 435–440."""@en,
+        "The BSD license on the BFO project site refers to code used to build BFO."@en .
+
+ns3:coeval_with rdfs:label "coeval with"@en ;
+    rdfs:comment "a relation adapt form RESQML,"^^xsd:string .
+
+ns3:east_of rdfs:label "east of"@en .
+
+ns3:has_1D_boundary rdfs:label "has 1D boundary"^^xsd:string .
+
+ns3:has_quality_value rdfs:label "has quality value"^^xsd:string ;
+    rdfs:comment "A relation between a Quality and its value."@en .
+
+ns3:has_structure rdfs:label "has structure"@en .
+
+ns3:north_of rdfs:label "north of"@en .
+
+ns3:occupies rdfs:label "has spatial region"^^xsd:string .
+
+ns3:older_than rdfs:label "older than"@en .
+
+ns3:south_of rdfs:label "south of"@en .
+
+ns3:spatial_region_of rdfs:label "spatial region of"^^xsd:string .
+
+ns3:structure_of rdfs:label "structure of"@en .
+
+ns3:west_of rdfs:label "west of"@en .
+
+ns3:yonger_than rdfs:label "younger than"@en .
+
+ns4:GeoCoreOntology_age_of rdfs:label "age of"@en .
+
+ns4:GeoCoreOntology_carrier_of rdfs:label "carrier of"^^xsd:string .
+
+ns4:GeoCoreOntology_constituted_by rdfs:label "constituted by"@en .
+
+ns4:GeoCoreOntology_generated_by rdfs:label "generated by"@en .
+
+ns4:GeoCoreOntology_generated_in rdfs:label "generated in"@en .
+
+ns4:GeoCoreOntology_generically_depends_on rdfs:label "generically depends on"@en ;
+    ns1:IAO_0000118 "g-depends on"@en .
+
+ns4:GeoCoreOntology_has_age rdfs:label "has age"@en .
+
+ns2:GeologicalSpatialRelationsOntology_above rdfs:label "above"@en .
+
+ns2:GeologicalSpatialRelationsOntology_behind rdfs:label "behind"@en .
+
+ns2:GeologicalSpatialRelationsOntology_below rdfs:label "below"@en .
+
+ns2:GeologicalSpatialRelationsOntology_externally_connected_with rdfs:label "externally connected with"@en .
+
+ns2:GeologicalSpatialRelationsOntology_has_non_tangential_proper_spatial_part rdfs:label "has non-tangential proper spatial part"@en .
+
+ns2:GeologicalSpatialRelationsOntology_has_proper_spatial_part rdfs:label "has proper spatial part"@en .
+
+ns2:GeologicalSpatialRelationsOntology_has_tangential_proper_spatial_part rdfs:label "has tangential proper spatial part"@en .
+
+ns2:GeologicalSpatialRelationsOntology_in_front_of rdfs:label "in front of"@en .
+
+ns2:GeologicalSpatialRelationsOntology_left_of rdfs:label "left of"@en .
+
+ns2:GeologicalSpatialRelationsOntology_non_tangential_proper_spatial_part_of rdfs:label "non-tangential proper spatial part of"@en .
+
+ns2:GeologicalSpatialRelationsOntology_proper_spatial_part_of rdfs:label "proper spatial part of"@en .
+
+ns2:GeologicalSpatialRelationsOntology_right_of rdfs:label "right of"@en .
+
+ns2:GeologicalSpatialRelationsOntology_spatially_disconnected_from rdfs:label "spatially disconnected from"@en .
+
+ns2:GeologicalSpatialRelationsOntology_spatially_discrete_from rdfs:label "spatially discrete from"@en .
+
+ns2:GeologicalSpatialRelationsOntology_spatially_identical_to rdfs:label "spatially identical to"@en .
+
+ns2:GeologicalSpatialRelationsOntology_spatially_partially_overlaps rdfs:label "spatially partially overlaps"@en .
+
+ns2:GeologicalSpatialRelationsOntology_tangential_proper_spatial_part_of rdfs:label "tangential proper spatial part of"@en .
+
+ns1:BFO_0000011 rdfs:label "spatiotemporal region"@en ;
+    ns1:IAO_0000600 "A spatiotemporal region is an occurrent entity that is part of spacetime. (axiom label in BFO2 Reference: [095-001])"@en ;
+    ns1:IAO_0000601 "All parts of spatiotemporal regions are spatiotemporal regions. (axiom label in BFO2 Reference: [096-001])"@en,
+        "Each spatiotemporal region at any time t projects_onto some spatial region at t. (axiom label in BFO2 Reference: [099-001])"@en,
+        "Each spatiotemporal region projects_onto some temporal region. (axiom label in BFO2 Reference: [098-001])"@en,
+        "Every spatiotemporal region occupies_spatiotemporal_region itself."@en,
+        "Every spatiotemporal region s is such that s occupies_spatiotemporal_region s. (axiom label in BFO2 Reference: [107-002])"@en ;
+    ns1:IAO_0000602 "(forall (r) (if (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion r r))) // axiom label in BFO2 CLIF: [107-002] "^^xsd:string,
+        "(forall (x t) (if (SpatioTemporalRegion x) (exists (y) (and (SpatialRegion y) (spatiallyProjectsOntoAt x y t))))) // axiom label in BFO2 CLIF: [099-001] "^^xsd:string,
+        "(forall (x y) (if (and (SpatioTemporalRegion x) (occurrentPartOf y x)) (SpatioTemporalRegion y))) // axiom label in BFO2 CLIF: [096-001] "^^xsd:string,
+        "(forall (x) (if (SpatioTemporalRegion x) (Occurrent x))) // axiom label in BFO2 CLIF: [095-001] "^^xsd:string,
+        "(forall (x) (if (SpatioTemporalRegion x) (exists (y) (and (TemporalRegion y) (temporallyProjectsOnto x y))))) // axiom label in BFO2 CLIF: [098-001] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000003 .
+
+ns1:BFO_0000018 rdfs:label "zero-dimensional spatial region"@en ;
+    ns1:IAO_0000600 "A zero-dimensional spatial region is a point in space. (axiom label in BFO2 Reference: [037-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (ZeroDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [037-001] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000006 .
+
+ns1:BFO_0000026 rdfs:label "one-dimensional spatial region"@en ;
+    ns1:IAO_0000600 "A one-dimensional spatial region is a line or aggregate of lines stretching from one point in space to another. (axiom label in BFO2 Reference: [038-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (OneDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [038-001] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000006 .
+
+ns1:BFO_0000027 rdfs:label "object aggregate"@en ;
+    ns1:IAO_0000600 "b is an object aggregate means: b is a material entity consisting exactly of a plurality of objects as member_parts at all times at which b exists. (axiom label in BFO2 Reference: [025-004])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000040 .
+
+ns1:BFO_0000028 rdfs:label "three-dimensional spatial region"@en ;
+    ns1:IAO_0000600 "A three-dimensional spatial region is a spatial region that is of three dimensions. (axiom label in BFO2 Reference: [040-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (ThreeDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [040-001] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000006 .
+
+ns1:BFO_0000029 rdfs:label "site"@en ;
+    ns1:IAO_0000600 "b is a site means: b is a three-dimensional immaterial entity that is (partially or wholly) bounded by a material entity or it is a three-dimensional immaterial part thereof. (axiom label in BFO2 Reference: [034-002])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (Site x) (ImmaterialEntity x))) // axiom label in BFO2 CLIF: [034-002] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000141 .
+
+ns1:BFO_0000035 rdfs:label "process boundary"@en ;
+    ns1:IAO_0000601 "Every process boundary occupies_temporal_region a zero-dimensional temporal region. (axiom label in BFO2 Reference: [085-002])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (ProcessBoundary x) (exists (y) (and (ZeroDimensionalTemporalRegion y) (occupiesTemporalRegion x y))))) // axiom label in BFO2 CLIF: [085-002] "^^xsd:string,
+        "(iff (ProcessBoundary a) (exists (p) (and (Process p) (temporalPartOf a p) (not (exists (b) (properTemporalPartOf b a)))))) // axiom label in BFO2 CLIF: [084-001] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000003 .
+
+ns1:BFO_0000144 rdfs:label "process profile"@en ;
+    ns1:IAO_0000600 "b process_profile_of c holds when b proper_occurrent_part_of c& there is some proper_occurrent_part d of c which has no parts in common with b & is mutually dependent on b& is such that b, c and d occupy the same temporal region (axiom label in BFO2 Reference: [094-005])"@en ;
+    ns1:IAO_0000602 "(forall (x y) (if (processProfileOf x y) (and (properContinuantPartOf x y) (exists (z t) (and (properOccurrentPartOf z y) (TemporalRegion t) (occupiesSpatioTemporalRegion x t) (occupiesSpatioTemporalRegion y t) (occupiesSpatioTemporalRegion z t) (not (exists (w) (and (occurrentPartOf w x) (occurrentPartOf w z))))))))) // axiom label in BFO2 CLIF: [094-005] "^^xsd:string,
+        "(iff (ProcessProfile a) (exists (b) (and (Process b) (processProfileOf a b)))) // axiom label in BFO2 CLIF: [093-002] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000015 .
+
+ns1:BFO_0000147 rdfs:label "zero-dimensional continuant fiat boundary"@en ;
+    ns1:IAO_0000600 "a zero-dimensional continuant fiat boundary is a fiat point whose location is defined in relation to some material entity. (axiom label in BFO2 Reference: [031-001])"@en ;
+    ns1:IAO_0000602 "(iff (ZeroDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (ZeroDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [031-001] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000140 .
+
+ns1:BFO_0000148 rdfs:label "zero-dimensional temporal region"@en ;
+    ns1:IAO_0000118 "temporal instant."@en ;
+    ns1:IAO_0000600 "A zero-dimensional temporal region is a temporal region that is without extent. (axiom label in BFO2 Reference: [102-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (ZeroDimensionalTemporalRegion x) (TemporalRegion x))) // axiom label in BFO2 CLIF: [102-001] "^^xsd:string ;
+    rdfs:subClassOf ns1:BFO_0000008 .
+
+ns1:BFO_0000182 rdfs:label "history"@en ;
+    ns1:IAO_0000600 "A history is a process that is the sum of the totality of processes taking place in the spatiotemporal region occupied by a material entity or site, including processes on the surface of the entity or within the cavities to which it serves as host. (axiom label in BFO2 Reference: [138-001])"@en ;
+    rdfs:subClassOf ns1:BFO_0000015 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:anastomosing> rdfs:label "anastomosing"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:antithetic_fault> rdfs:label "antithetic fault"@en ;
+    rdfs:comment "Reference: Van der Pluijm et al. (2004a)"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:minor_fault> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:chatter_mark> rdfs:label "chatter mark"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_displacement_indicator> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:conjugate> rdfs:label "conjugate"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:deformation_band_object> rdfs:label "deformation band"@en ;
+    rdfs:comment "References: Shipton et al., (2005), Fossen et al.(2007);-, Torabi et al., (2021)."@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_geological_object ;
+    ns4:GeoCoreOntology_constituted_by ns4:GeoCoreOntology_rock ;
+    ns4:GeoCoreOntology_generated_by <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:geological_deformation> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:dextral_fault> rdfs:label "dextral strike-slip fault"@en ;
+    rdfs:comment "References: ;Van der Pluijm et al. (2004a). Fossen (2016a)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:strike-slip_fault> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:dip_separation> rdfs:label "dip separation"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:duplex_structure> rdfs:label "duplex structure"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_array_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:en_echelon> rdfs:label "en echelon"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_dip_direction> rdfs:label "fault dip direction"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_orientation> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_strike_azimuth> rdfs:label "fualt strike azimuth"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_orientation> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:flower> rdfs:label "flower"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:growth_fault> rdfs:label "growth fault"@en ;
+    rdfs:comment "References: Kuecher et al. (2001), Baudon and Cartwright  (2008)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:heave> rdfs:label "heave"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:negative_structure> rdfs:label "negative structure"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_array_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:nonsystematic> rdfs:label "nonsystematic"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:normal_fault> rdfs:label "normal fault"@en ;
+    rdfs:comment "References : Van der Pluijm et al. (2004a),  Davis et al. (2011), Fossen  (2016a)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:oblique_fault> rdfs:label "oblique fault"@en ;
+    rdfs:comment "Reference Van der Pluijm et al. (2004a))."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:parallel> rdfs:label "parallel"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:positive_structure> rdfs:label "positive structure"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_array_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:relay> rdfs:label "relay"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rotation_fault> rdfs:label "rotation fault"@en ;
+    rdfs:comment "Reference Van der Pluijm et al. (2004a))."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:sinistral_fault> rdfs:label "sinistral strike-slip fault"@en ;
+    rdfs:comment "References: ;Van der Pluijm et al. (2004a). Fossen (2016a)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:strike-slip_fault> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:slickenline> rdfs:label "slickenline"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_displacement_indicator> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:slickenside> rdfs:label "slickenside"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_displacement_indicator> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:strike_separation> rdfs:label "strike separation"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:synthetic_fault> rdfs:label "synthetic fault"@en ;
+    rdfs:comment "Reference: Van der Pluijm et al. (2004a)"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:minor_fault> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:throw> rdfs:label "throw"@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation> .
+
+ns4:GeoCoreOntology_earth_fluid rdfs:label "earth fluid"@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_earth_material .
+
+ns4:GeoCoreOntology_geological_contact rdfs:label "geological contact"@en ;
+    rdfs:comment """There was some problem with the axiom asserting that the contanct depends on two different objects.
+
+We have to check it better."""@en ;
+    rdfs:subClassOf ns1:BFO_0000145 .
+
+ns4:GeoCoreOntology_geological_time_interval rdfs:label "geological time interval"@en ;
+    rdfs:subClassOf ns1:BFO_0000038 .
+
+ns4:GeoCoreOntology_mineral rdfs:label "amount of mineral"@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_earth_material .
+
+ns4:GeoCoreOntology_unconsolidated_earth_material rdfs:label "unconsolidated earth material"@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_earth_material .
+
+<urn:swrl#d> a <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl#e> a <http://www.w3.org/2003/11/swrl#Variable> .
+
+ns1:BFO_0000001 rdfs:label "entity"@en ;
+    ns1:IAO_0000600 "An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])"@en ;
+    owl2vec:superClassOf ns1:BFO_0000002,
+        ns1:BFO_0000003 .
+
+ns1:BFO_0000009 rdfs:label "two-dimensional spatial region"@en ;
+    ns1:IAO_0000600 "A two-dimensional spatial region is a spatial region that is of two dimensions. (axiom label in BFO2 Reference: [039-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (TwoDimensionalSpatialRegion x) (SpatialRegion x))) // axiom label in BFO2 CLIF: [039-001] "^^xsd:string ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_location> ;
+    rdfs:subClassOf ns1:BFO_0000006 .
+
+ns1:BFO_0000030 rdfs:label "object"@en ;
+    ns1:IAO_0000600 "b is an object means: b is a material entity which manifests causal unity of one or other of the types CUn listed above & is of a type (a material universal) instances of which are maximal relative to this criterion of causal unity. (axiom label in BFO2 Reference: [024-001])"@en ;
+    owl2vec:superClassOf ns4:GeoCoreOntology_geological_object ;
+    rdfs:subClassOf ns1:BFO_0000040 .
+
+ns1:BFO_0000034 rdfs:label "function"@en ;
+    ns1:IAO_0000600 "A function is a disposition that exists in virtue of the bearer’s physical make-up and this physical make-up is something the bearer possesses because it came into being, either through evolution (in the case of natural biological entities) or through intentional design (in the case of artifacts), in order to realize processes of a certain sort. (axiom label in BFO2 Reference: [064-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] "^^xsd:string ;
+    ns1:RO_0000079 ns1:BFO_0000004 ;
+    rdfs:subClassOf ns1:BFO_0000016 .
+
+ns1:BFO_0000038 rdfs:label "one-dimensional temporal region"@en ;
+    ns1:IAO_0000600 "A one-dimensional temporal region is a temporal region that is extended. (axiom label in BFO2 Reference: [103-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (OneDimensionalTemporalRegion x) (TemporalRegion x))) // axiom label in BFO2 CLIF: [103-001] "^^xsd:string ;
+    owl2vec:superClassOf ns4:GeoCoreOntology_geological_time_interval ;
+    rdfs:subClassOf ns1:BFO_0000008 .
+
+ns1:BFO_0000142 rdfs:label "one-dimensional continuant fiat boundary"@en ;
+    ns1:IAO_0000600 "a one-dimensional continuant fiat boundary is a continuous fiat line whose location is defined in relation to some material entity. (axiom label in BFO2 Reference: [032-001])"@en ;
+    ns1:IAO_0000602 "(iff (OneDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (OneDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [032-001] "^^xsd:string ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_tip_line> ;
+    rdfs:subClassOf ns1:BFO_0000140 .
+
+ns1:BFO_0000146 rdfs:label "two-dimensional continuant fiat boundary"@en ;
+    ns1:IAO_0000600 "a two-dimensional continuant fiat boundary (surface) is a self-connected fiat surface whose location is defined in relation to some material entity. (axiom label in BFO2 Reference: [033-001])"@en ;
+    ns1:IAO_0000602 "(iff (TwoDimensionalContinuantFiatBoundary a) (and (ContinuantFiatBoundary a) (exists (b) (and (TwoDimensionalSpatialRegion b) (forall (t) (locatedInAt a b t)))))) // axiom label in BFO2 CLIF: [033-001] "^^xsd:string ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface> ;
+    rdfs:subClassOf ns1:BFO_0000140 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:barrier> rdfs:label "barrier"@en ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    rdfs:comment "Reference: Caine et al.( 1996)"@en ;
+    rdfs:subClassOf ns1:BFO_0000023 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:conduit> rdfs:label "conduit"@en ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    rdfs:comment "Reference: Caine et al.( 1996)"@en ;
+    rdfs:subClassOf ns1:BFO_0000023 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_breccia> rdfs:label "fault breccia"@en ;
+    ns1:RO_0000086 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:large_clasts_proportion> ;
+    rdfs:comment "Reference: Woodcock and Mort (2008)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_rock> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_lens> rdfs:label "fault core lens"@en ;
+    ns1:BFO_0000050 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core> ;
+    rdfs:comment "Note: It often has a diamond shaped shape located inside the fault core. It corresponds to a portion of rock ripped off from a fault wall or fault core by shear slip surfaces."@en,
+        "References; Lindanger et al. (2007), Braathen et al. (2009),  Gabrielsen et al., (2017)"@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_geological_object ;
+    ns4:GeoCoreOntology_constituted_by ns4:GeoCoreOntology_rock .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_horse> rdfs:label "fault horse"@en ;
+    rdfs:comment "Note:  Gabrielsen et al (2017) and Lindager et al (2007) condiderv that  “Lens” and “Horse” are interchangeable terms for designating parts of FaultCore.  However, in the context of duplex structure ,the term  “horse” is used with another meaning . We have defined  the term ‘Fault  Horse”  according ti this lattere meaning"@en,
+        "Reference: Groshong Jr (2006)."@en ;
+    rdfs:subClassOf ns1:BFO_0000004,
+        ns4:GeoCoreOntology_geological_object ;
+    ns2:GeologicalSpatialRelationsOntology_externally_connected_with <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:physical_slip_surface> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:footwall> rdfs:label "footwall"@en ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume> ;
+    rdfs:comment "References:  Van der Pluijm et al., (2004a). Davis et al., (2011)."@en ;
+    rdfs:subClassOf ns1:BFO_0000023 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:hanging_wall> rdfs:label "hanging wall"@en ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume> ;
+    rdfs:comment "Hanging Wall: a role that is role_of  some Fault Wall located above the Fault Surface to which it is related."@en,
+        "References:  Van der Pluijm et al., (2004a), Davis et al., (2011)."@en ;
+    rdfs:subClassOf ns1:BFO_0000023 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:major_fault> rdfs:label "major fault"@en ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    rdfs:comment "Reference: Van der Pluijm et al. (2004a)"@en,
+        "synonym: main fault, first order faultc, principle fault"@en ;
+    rdfs:subClassOf ns1:BFO_0000023 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:permeability> rdfs:label "permeability"@en ;
+    ns1:RO_0000092 ns4:GeoCoreOntology_rock ;
+    rdfs:comment "References: Ahmed et al. (1991), Bjorlykke (2010)."@en ;
+    rdfs:subClassOf ns1:BFO_0000016 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:proto_lith> rdfs:label "protolith role"@en ;
+    ns1:RO_0000081 ns4:GeoCoreOntology_rock ;
+    rdfs:comment "References: Rowley et al. (1997). Hoskin and Black (2000)"@en ;
+    rdfs:subClassOf ns1:BFO_0000023 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:relay_damage_zone> rdfs:label "relay zone"@en ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_volume> ;
+    rdfs:comment "References: Childs et al., (1995), Groshong Jr, (2006), Davis et al.,(2011)"@en ;
+    rdfs:subClassOf ns1:BFO_0000023 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:reverse_fault> rdfs:label "reverse fault"@en ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:thrust_fault> ;
+    rdfs:comment "References : Van der Pluijm et al. (2004a),  Davis et al. (2011), Fossen  (2016a)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:thrust_fault> rdfs:label "thrust fault"@en ;
+    rdfs:comment "References : Van der Pluijm et al. (2004a),  Davis et al. (2011), Fossen  (2016a)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:low-angle_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:reverse_fault> .
+
+ns3:composite_shape rdfs:label "composite shape"@en ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_shape> .
+
+ns3:continuous rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:continuity> .
+
+ns3:curved_shape rdfs:label "curved shape"@en ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_shape> .
+
+ns3:irregular rdfs:label "irregular"@en ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_shape> .
+
+ns3:is_smeared rdfs:label "is smeared"@en ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:smeared> .
+
+ns3:not_smeared rdfs:label "not smeared"@en ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:smeared> .
+
+ns3:planar_shape rdfs:label "planar shape"@en ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_shape> .
+
+ns3:semicontinuous rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:continuity> .
+
+<http://www.w3.org/2003/11/swrl#Variable> owl2vec:typeOf <urn:swrl#d>,
+        <urn:swrl#e> .
+
+ns4:GeoCoreOntology_geological_age rdfs:label "geological age"@en ;
+    rdfs:subClassOf ns1:BFO_0000019 ;
+    ns4:GeoCoreOntology_age_of ns4:GeoCoreOntology_geological_object .
+
+ns1:BFO_0000008 rdfs:label "temporal region"@en ;
+    ns1:IAO_0000600 "A temporal region is an occurrent entity that is part of time as defined relative to some reference frame. (axiom label in BFO2 Reference: [100-001])"@en ;
+    ns1:IAO_0000601 "All parts of temporal regions are temporal regions. (axiom label in BFO2 Reference: [101-001])"@en,
+        "Every temporal region t is such that t occupies_temporal_region t. (axiom label in BFO2 Reference: [119-002])"@en ;
+    ns1:IAO_0000602 "(forall (r) (if (TemporalRegion r) (occupiesTemporalRegion r r))) // axiom label in BFO2 CLIF: [119-002] "^^xsd:string,
+        "(forall (x y) (if (and (TemporalRegion x) (occurrentPartOf y x)) (TemporalRegion y))) // axiom label in BFO2 CLIF: [101-001] "^^xsd:string,
+        "(forall (x) (if (TemporalRegion x) (Occurrent x))) // axiom label in BFO2 CLIF: [100-001] "^^xsd:string ;
+    owl2vec:superClassOf ns1:BFO_0000038,
+        ns1:BFO_0000148 ;
+    rdfs:subClassOf ns1:BFO_0000003 .
+
+ns1:BFO_0000145 rdfs:label "relational quality"@en ;
+    ns1:IAO_0000602 "(iff (RelationalQuality a) (exists (b c t) (and (IndependentContinuant b) (IndependentContinuant c) (qualityOfAt a b t) (qualityOfAt a c t)))) // axiom label in BFO2 CLIF: [057-001] "^^xsd:string ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation>,
+        ns4:GeoCoreOntology_geological_contact ;
+    rdfs:subClassOf ns1:BFO_0000019 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cataclasite> rdfs:label "cataclasite"@en ;
+    ns1:RO_0000086 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:large_clasts_proportion>,
+        ns3:cohesive ;
+    rdfs:comment "Reference: Woodcock and Mort (2008)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_rock> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:detachment_fault> rdfs:label "detachment fault"@en ;
+    ns1:RO_0000058 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_dip_angle> ;
+    rdfs:comment "References : Van der Pluijm et al. (2004a),  Davis et al. (2011)."@en ;
+    rdfs:subClassOf ns1:BFO_0000031,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_dip_angle> rdfs:label "fault dip angle"@en ;
+    ns1:RO_0000059 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:detachment_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:low-angle_fault> ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_orientation> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_gouge> rdfs:label "fault gouge"@en ;
+    ns1:RO_0000086 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:large_clasts_proportion>,
+        ns3:non-cohesive ;
+    rdfs:comment "Reference: Woodcock and Mort (2008)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_rock> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:strike-slip_fault> rdfs:label "strike-slip fault"@en ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:dextral_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:sinistral_fault> ;
+    rdfs:comment "References : Van der Pluijm et al. (2004a),  Davis et al. (2011), Fossen  (2016a)."@en ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:subsidiary_fault> rdfs:label "subsidiary fault"@en ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    rdfs:subClassOf ns1:BFO_0000023,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:minor_fault> .
+
+ns3:cohesive rdfs:label "cohesive"@en ;
+    ns1:RO_0000080 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cataclasite> ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cohesion> .
+
+ns3:non-cohesive rdfs:label "non-cohesive"@en ;
+    ns1:RO_0000080 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_gouge> ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cohesion> .
+
+ns4:GeoCoreOntology_geological_boundary rdfs:label "geological boundary"@en ;
+    rdfs:subClassOf ns1:BFO_0000004,
+        ns1:BFO_0000140 ;
+    ns2:GeologicalSpatialRelationsOntology_proper_spatial_part_of ns4:GeoCoreOntology_geological_object .
+
+ns1:BFO_0000016 rdfs:label "disposition"@en ;
+    ns1:IAO_0000600 "b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])"@en ;
+    ns1:IAO_0000601 "If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])"@en ;
+    ns1:IAO_0000602 "(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] "^^xsd:string,
+        "(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] "^^xsd:string ;
+    ns1:RO_0000092 ns1:BFO_0000004 ;
+    owl2vec:superClassOf ns1:BFO_0000034,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:permeability> ;
+    rdfs:subClassOf ns1:BFO_0000017 .
+
+ns1:BFO_0000017 rdfs:label "realizable entity"@en ;
+    ns1:BFO_0000054 ns1:BFO_0000015 ;
+    ns1:IAO_0000600 "To say that b is a realizable entity is to say that b is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region and is of a type instances of which are realized in processes of a correlated type. (axiom label in BFO2 Reference: [058-002])"@en ;
+    ns1:IAO_0000601 "All realizable dependent continuants have independent continuants that are not spatial regions as their bearers. (axiom label in BFO2 Reference: [060-002])"@en ;
+    ns1:IAO_0000602 "(forall (x t) (if (RealizableEntity x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (bearerOfAt y x t))))) // axiom label in BFO2 CLIF: [060-002] "^^xsd:string,
+        "(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] "^^xsd:string ;
+    owl2vec:superClassOf ns1:BFO_0000016,
+        ns1:BFO_0000023 ;
+    rdfs:subClassOf ns1:BFO_0000020 .
+
+ns1:BFO_0000024 rdfs:label "fiat object part"@en ;
+    ns1:IAO_0000600 "b is a fiat object part = Def. b is a material entity which is such that for all times t, if b exists at t then there is some object c such that b proper continuant_part of  c at t and c is demarcated from the remainder of c by a two-dimensional continuant fiat boundary. (axiom label in BFO2 Reference: [027-004])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (FiatObjectPart x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y) (and (Object y) (properContinuantPartOfAt x y t)))))))) // axiom label in BFO2 CLIF: [027-004] "^^xsd:string ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:physical_slip_surface>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_volume> ;
+    rdfs:subClassOf ns1:BFO_0000040 ;
+    ns4:GeoCoreOntology_carrier_of ns4:GeoCoreOntology_geological_structure .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cohesion> rdfs:label "cohesion"@en ;
+    owl2vec:superClassOf ns3:cohesive,
+        ns3:non-cohesive ;
+    rdfs:comment "Reference: Brodie et al. (2007)."@en ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_quality> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:continuity> rdfs:label "continuity"@en ;
+    ns1:RO_0000080 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_membrane> ;
+    owl2vec:superClassOf ns3:continuous,
+        ns3:semicontinuous ;
+    rdfs:comment "Reference: Braathen et al. (2009)."@en,
+        "Value:Continuous, Seimicontinuous."@en ;
+    rdfs:subClassOf ns1:BFO_0000019 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_membrane> rdfs:label "fault core membrane"@en ;
+    ns1:BFO_0000050 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core> ;
+    ns1:RO_0000086 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:continuity>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:smeared> ;
+    rdfs:comment "Reference: Braathen et al., (2009)."@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_geological_object ;
+    ns4:GeoCoreOntology_constituted_by <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_rock> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_location> rdfs:label "fault surface location"@en ;
+    ns1:RO_0000086 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_orientation> ;
+    ns3:spatial_region_of <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface> ;
+    rdfs:subClassOf ns1:BFO_0000006,
+        ns1:BFO_0000009 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system> rdfs:label "fault system"@en ;
+    ns1:BFO_0000051 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_material_entity> ;
+    ns3:has_structure <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_array_structure>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> ;
+    rdfs:subClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_volume> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_tip_line> rdfs:label "fault tip line"@en ;
+    rdfs:subClassOf ns1:BFO_0000141,
+        ns1:BFO_0000142 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:graben> rdfs:label "graben"@en ;
+    ns1:RO_0000059 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst_and_graben_structure> ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume> ;
+    rdfs:comment "References: Van der Pluijm et al. (2004a), Davis et al., (2011), Fossen (2016a)"@en ;
+    rdfs:subClassOf ns1:BFO_0000020,
+        ns1:BFO_0000023 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst> rdfs:label "horst"@en ;
+    ns1:RO_0000059 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst_and_graben_structure> ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume> ;
+    rdfs:comment "References: Van der Pluijm et al. (2004a), Davis et al., (2011), Fossen (2016a)"@en ;
+    rdfs:subClassOf ns1:BFO_0000020,
+        ns1:BFO_0000023 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst_and_graben_structure> rdfs:label "horst and graben structure"@en ;
+    ns1:RO_0000058 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:graben>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst> ;
+    rdfs:subClassOf ns1:BFO_0000031,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_array_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:low-angle_fault> rdfs:label "low-angle fault"@en ;
+    ns1:RO_0000058 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_dip_angle> ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:thrust_fault> ;
+    rdfs:comment "Reference Van der Pluijm et al. (2004a))."@en ;
+    rdfs:subClassOf ns1:BFO_0000031,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_quality> rdfs:label "rock quality"@en ;
+    ns1:RO_0000080 ns4:GeoCoreOntology_rock ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cohesion>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:large_clasts_proportion> ;
+    rdfs:subClassOf ns1:BFO_0000019 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:smeared> rdfs:label "smeared"@en ;
+    ns1:RO_0000080 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_membrane> ;
+    owl2vec:superClassOf ns3:is_smeared,
+        ns3:not_smeared ;
+    rdfs:comment "Note: the mechanisms of the smearing process such as normal stress increase, water content of clay increase, change of the shear strength of clay are not considered in the scope of this ontology work (Schmatz et al., 2010; Vrolijk et al., 2016)."@en,
+        "Reference: Braathen et al. (2009)."@en,
+        "Values: Is Smeared, Not Smeared"@en ;
+    rdfs:subClassOf ns1:BFO_0000019 .
+
+ns1:BFO_0000015 rdfs:label "process"@en ;
+    ns1:BFO_0000055 ns1:BFO_0000017 ;
+    ns1:IAO_0000602 "(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] "^^xsd:string ;
+    owl2vec:superClassOf ns1:BFO_0000144,
+        ns1:BFO_0000182,
+        ns4:GeoCoreOntology_geological_process ;
+    rdfs:comment "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t."@en ;
+    rdfs:subClassOf ns1:BFO_0000003 .
+
+ns1:BFO_0000140 rdfs:label "continuant fiat boundary"@en ;
+    ns1:IAO_0000601 "Every continuant fiat boundary is located at some spatial region at every time at which it exists"@en ;
+    ns1:IAO_0000602 "(iff (ContinuantFiatBoundary a) (and (ImmaterialEntity a) (exists (b) (and (or (ZeroDimensionalSpatialRegion b) (OneDimensionalSpatialRegion b) (TwoDimensionalSpatialRegion b)) (forall (t) (locatedInAt a b t)))) (not (exists (c t) (and (SpatialRegion c) (continuantPartOfAt c a t)))))) // axiom label in BFO2 CLIF: [029-001] "^^xsd:string ;
+    owl2vec:superClassOf ns1:BFO_0000142,
+        ns1:BFO_0000146,
+        ns1:BFO_0000147,
+        ns4:GeoCoreOntology_geological_boundary ;
+    rdfs:subClassOf ns1:BFO_0000141 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:damage_zone> rdfs:label "damage zone"@en ;
+    ns1:BFO_0000050 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    ns3:has_1D_boundary <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_tip_line> ;
+    rdfs:comment "Note: Researches like Kim et al. (2004), Choi et al. (2016) and Liao et al.(2020) show various anatomical views of damage zone from different perspectives and separate it into parts that have no clear physical boundaries. There is no absolute authoritative correct view of damage zone yet."@en,
+        "References:  Caine et al. (1996)  Billi et al. (2003), Berg and Skar (2005), Choi et al. (2016), Celestino et al. (2020)."@en ;
+    rdfs:subClassOf ns1:BFO_0000004,
+        ns1:BFO_0000040,
+        ns4:GeoCoreOntology_geological_object ;
+    ns2:GeologicalSpatialRelationsOntology_externally_connected_with <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_displacement_indicator> rdfs:label "slip surface structure"@en ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:chatter_mark>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:slickenline>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:slickenside> ;
+    ns3:structure_of <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:physical_slip_surface> ;
+    rdfs:comment "References : Van der Pluijm et al. (2004a), Davis et al., (2011)."@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_geological_structure .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_orientation> rdfs:label "fault orientation"@en ;
+    ns1:RO_0000080 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_location> ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_dip_angle>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_dip_direction>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_strike_azimuth> ;
+    rdfs:subClassOf ns1:BFO_0000019 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:geological_deformation> rdfs:label "geological deformation"@en ;
+    ns1:RO_0000057 ns1:BFO_0000040 ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:shear_deformation> ;
+    rdfs:comment "Reference: Fossen (2016b)."@en ;
+    rdfs:subClassOf ns1:BFO_0000003,
+        ns4:GeoCoreOntology_geological_process .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:large_clasts_proportion> rdfs:label "large clasts proportion"@en ;
+    ns1:RO_0000080 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cataclasite>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_breccia>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_gouge> ;
+    rdfs:comment "Reference: Woodcock and Mort ( 2008))."@en ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_quality> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:minor_fault> rdfs:label "minor fault"^^xsd:string ;
+    ns1:RO_0000081 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:antithetic_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:synthetic_fault> ;
+    rdfs:comment "Refrences: Song and Cawood ( 2001), Nishiwaki and Lin (2019)"@en,
+        "synonym: Subsidiary fault, Spaly fault"@en ;
+    rdfs:subClassOf ns1:BFO_0000023,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:subsidiary_fault> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:physical_slip_surface> rdfs:label "physical slip surface"@en ;
+    ns1:BFO_0000050 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume> ;
+    ns3:has_structure <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_displacement_indicator> ;
+    rdfs:comment "References: Davis et al., (2011a); Shipton et al., (2006); Watterson, (1986)."@en ;
+    rdfs:subClassOf ns1:BFO_0000004,
+        ns1:BFO_0000024 ;
+    ns2:GeologicalSpatialRelationsOntology_externally_connected_with <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core> .
+
+ns1:BFO_0000002 rdfs:label "continuant"@en ;
+    ns1:IAO_0000600 "A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity. (axiom label in BFO2 Reference: [008-002])"@en ;
+    ns1:IAO_0000601 "if b is a continuant and if, for some t, c has_continuant_part b at t, then c is a continuant. (axiom label in BFO2 Reference: [126-001])"@en,
+        "if b is a continuant and if, for some t, cis continuant_part of b at t, then c is a continuant. (axiom label in BFO2 Reference: [009-002])"@en,
+        "if b is a material entity, then there is some temporal interval (referred to below as a one-dimensional temporal region) during which b exists. (axiom label in BFO2 Reference: [011-002])"@en ;
+    ns1:IAO_0000602 "(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] "^^xsd:string,
+        "(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] "^^xsd:string,
+        "(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] "^^xsd:string,
+        "(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] "^^xsd:string ;
+    ns1:RO_0000056 ns1:BFO_0000003 ;
+    owl2vec:superClassOf ns1:BFO_0000004,
+        ns1:BFO_0000020,
+        ns1:BFO_0000031,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    rdfs:subClassOf ns1:BFO_0000001 .
+
+ns1:BFO_0000020 rdfs:label "specifically dependent continuant"@en ;
+    ns1:IAO_0000602 "(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] "^^xsd:string ;
+    ns1:RO_0000059 ns1:BFO_0000031 ;
+    owl2vec:superClassOf ns1:BFO_0000017,
+        ns1:BFO_0000019,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:graben>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst> ;
+    rdfs:comment "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same."@en ;
+    rdfs:subClassOf ns1:BFO_0000002 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_array_structure> rdfs:label "fault system structure"@en ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:duplex_structure>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst_and_graben_structure>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:negative_structure>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:positive_structure> ;
+    ns3:structure_of <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system> ;
+    rdfs:comment "Reference : Van der Pluijm et al. (2004a)"@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_geological_structure .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_material_entity> rdfs:label "fault volume"@en ;
+    ns1:BFO_0000050 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system> ;
+    ns1:BFO_0000051 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    rdfs:comment "Note: the concept of Fault Volume is about the Fault Zone and its Fault Wall (hanging wall, foot wall) which has undetermined boundaries."@en ;
+    rdfs:subClassOf ns1:BFO_0000004,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_volume> ;
+    ns4:GeoCoreOntology_carrier_of <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_rock> rdfs:label "brittle fault rock"@en ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cataclasite>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_breccia>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_gouge> ;
+    rdfs:comment "References: Sibson (1977); Brodie et al. (2007), Woodcock and Mort (2008)."@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_rock ;
+    ns4:GeoCoreOntology_generated_by <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:shear_deformation> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface> rdfs:label "fault surface"@en ;
+    ns1:RO_0000086 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_shape> ;
+    ns1:RO_0002000 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    ns3:occupies <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_location> ;
+    rdfs:subClassOf ns1:BFO_0000004,
+        ns1:BFO_0000141,
+        ns1:BFO_0000146 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_shape> rdfs:label "fault surface shape"@en ;
+    ns1:RO_0000080 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface> ;
+    owl2vec:superClassOf ns3:composite_shape,
+        ns3:curved_shape,
+        ns3:irregular,
+        ns3:planar_shape ;
+    rdfs:comment "Value: Planar, Listric, Composite, Irregular."@en ;
+    rdfs:subClassOf ns1:BFO_0000019 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_volume> rdfs:label "rock volume"@en ;
+    ns1:BFO_0000050 ns4:GeoCoreOntology_geological_object ;
+    ns1:RO_0000087 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:relay_damage_zone> ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_material_entity>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume> ;
+    rdfs:subClassOf ns1:BFO_0000024 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:shear_deformation> rdfs:label "brittle shear deformation"@en ;
+    ns1:RO_0000057 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    rdfs:comment "References:  Sibson (1977); Van der Pluijm et al. (2004b), Fossen (2016b)."@en ;
+    rdfs:subClassOf ns1:BFO_0000003,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:geological_deformation>,
+        ns4:GeoCoreOntology_geological_process .
+
+ns1:BFO_0000006 rdfs:label "spatial region"@en ;
+    ns1:IAO_0000600 "A spatial region is a continuant entity that is a continuant_part_of spaceR as defined relative to some frame R. (axiom label in BFO2 Reference: [035-001])"@en ;
+    ns1:IAO_0000601 "All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])"@en ;
+    ns1:IAO_0000602 "(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] "^^xsd:string,
+        "(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] "^^xsd:string ;
+    owl2vec:superClassOf ns1:BFO_0000009,
+        ns1:BFO_0000018,
+        ns1:BFO_0000026,
+        ns1:BFO_0000028,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_location> ;
+    ns3:spatial_region_of ns1:BFO_0000004 ;
+    rdfs:subClassOf ns1:BFO_0000141 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation> rdfs:label "fault maximum separation"@en ;
+    ns1:RO_0000080 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume> ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:dip_separation>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:heave>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:strike_separation>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:throw> ;
+    rdfs:comment "References: Van der Pluijm et al., (2004a), Davis et al., (2011)."@en ;
+    rdfs:subClassOf ns1:BFO_0000019,
+        ns1:BFO_0000145 .
+
+ns4:GeoCoreOntology_earth_material rdfs:label "earth material"@en ;
+    ns1:RO_0000056 ns4:GeoCoreOntology_geological_process ;
+    owl2vec:superClassOf ns4:GeoCoreOntology_earth_fluid,
+        ns4:GeoCoreOntology_mineral,
+        ns4:GeoCoreOntology_rock,
+        ns4:GeoCoreOntology_unconsolidated_earth_material ;
+    rdfs:subClassOf ns1:BFO_0000040 ;
+    ns4:GeoCoreOntology_generated_by ns4:GeoCoreOntology_geological_process .
+
+ns4:GeoCoreOntology_rock rdfs:label "amount of rock"@en ;
+    ns1:RO_0000086 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_quality> ;
+    ns1:RO_0000087 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:proto_lith> ;
+    ns1:RO_0000091 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:permeability> ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_rock> ;
+    rdfs:subClassOf ns4:GeoCoreOntology_earth_material .
+
+ns1:BFO_0000031 rdfs:label "generically dependent continuant"@en ;
+    ns1:IAO_0000602 "(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] "^^xsd:string ;
+    ns1:RO_0000058 ns1:BFO_0000020 ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:detachment_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst_and_graben_structure>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:low-angle_fault>,
+        ns4:GeoCoreOntology_geological_structure ;
+    rdfs:comment "A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time."@en ;
+    rdfs:subClassOf ns1:BFO_0000002 ;
+    ns4:GeoCoreOntology_generically_depends_on ns1:BFO_0000004 .
+
+ns1:BFO_0000141 rdfs:label "immaterial entity"@en ;
+    ns1:RO_0002000 ns1:BFO_0000040 ;
+    owl2vec:superClassOf ns1:BFO_0000006,
+        ns1:BFO_0000029,
+        ns1:BFO_0000140,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_tip_line> ;
+    rdfs:subClassOf ns1:BFO_0000004 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core> rdfs:label "fault core"@en ;
+    ns1:BFO_0000050 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    ns1:BFO_0000051 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_lens>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_membrane> ;
+    rdfs:comment "References: Caine et al.( 1996), Shipton et al. (2006), Wibberley et al.( 2008),  Faulkner et al. (2010);, Torabi et al. (2019)."@en ;
+    rdfs:subClassOf ns1:BFO_0000004,
+        ns4:GeoCoreOntology_geological_object ;
+    ns4:GeoCoreOntology_constituted_by <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_rock> ;
+    ns4:GeoCoreOntology_generated_by <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:shear_deformation> .
+
+ns4:GeoCoreOntology_geological_structure rdfs:label "geological structure"@en ;
+    ns1:RO_0000058 ns1:BFO_0000019 ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_array_structure>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_displacement_indicator>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> ;
+    rdfs:subClassOf ns1:BFO_0000031 ;
+    ns4:GeoCoreOntology_generically_depends_on ns1:BFO_0000024,
+        ns4:GeoCoreOntology_geological_object .
+
+ns1:BFO_0000040 rdfs:label "material entity"@en ;
+    ns1:IAO_0000600 "A material entity is an independent continuant that has some portion of matter as proper or improper continuant part. (axiom label in BFO2 Reference: [019-002])"@en ;
+    ns1:IAO_0000601 "Every entity which has a material entity as continuant part is a material entity. (axiom label in BFO2 Reference: [020-002])"@en,
+        "every entity of which a material entity is continuant part is also a material entity. (axiom label in BFO2 Reference: [021-002])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (MaterialEntity x) (IndependentContinuant x))) // axiom label in BFO2 CLIF: [019-002] "^^xsd:string,
+        "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt x y t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [021-002] "^^xsd:string,
+        "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] "^^xsd:string ;
+    ns1:RO_0000056 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:geological_deformation> ;
+    ns1:RO_0002002 ns1:BFO_0000141 ;
+    owl2vec:superClassOf ns1:BFO_0000024,
+        ns1:BFO_0000027,
+        ns1:BFO_0000030,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:damage_zone>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone>,
+        ns4:GeoCoreOntology_earth_material ;
+    ns3:has_1D_boundary ns1:BFO_0000141 ;
+    rdfs:subClassOf ns1:BFO_0000004 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system_structure> rdfs:label "fault array structure"@en ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:anastomosing>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:conjugate>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:en_echelon>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:flower>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:nonsystematic>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:parallel>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:relay> ;
+    ns3:structure_of <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_system> ;
+    rdfs:comment "Reference : Van der Pluijm et al. (2004a)."@en ;
+    rdfs:subClassOf ns4:GeoCoreOntology_geological_structure .
+
+ns4:GeoCoreOntology_geological_process rdfs:label "geological process"@en ;
+    ns1:BFO_0000066 ns4:GeoCoreOntology_geological_object ;
+    ns1:RO_0000057 ns4:GeoCoreOntology_earth_material,
+        ns4:GeoCoreOntology_geological_object ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:geological_deformation>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:shear_deformation> ;
+    rdfs:subClassOf ns1:BFO_0000003,
+        ns1:BFO_0000015 .
+
+ns1:BFO_0000003 rdfs:label "occurrent"@en ;
+    ns1:BFO_0000066 ns1:BFO_0000004 ;
+    ns1:IAO_0000600 "An occurrent is an entity that unfolds itself in time or it is the instantaneous boundary of such an entity (for example a beginning or an ending) or it is a temporal or spatiotemporal region which such an entity occupies_temporal_region or occupies_spatiotemporal_region. (axiom label in BFO2 Reference: [077-002])"@en ;
+    ns1:IAO_0000601 "Every occurrent occupies_spatiotemporal_region some spatiotemporal region. (axiom label in BFO2 Reference: [108-001])"@en,
+        "b is an occurrent entity iff b is an entity that has temporal parts. (axiom label in BFO2 Reference: [079-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] "^^xsd:string,
+        "(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] "^^xsd:string ;
+    ns1:RO_0000057 ns1:BFO_0000002 ;
+    owl2vec:superClassOf ns1:BFO_0000008,
+        ns1:BFO_0000011,
+        ns1:BFO_0000015,
+        ns1:BFO_0000035,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:geological_deformation>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:shear_deformation>,
+        ns4:GeoCoreOntology_geological_process ;
+    rdfs:subClassOf ns1:BFO_0000001 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume> rdfs:label "fault wall"@en ;
+    ns1:BFO_0000050 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_material_entity> ;
+    ns1:BFO_0000051 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:damage_zone>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:physical_slip_surface> ;
+    ns1:RO_0000086 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation> ;
+    ns1:RO_0000087 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:footwall>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:graben>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:hanging_wall>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst> ;
+    rdfs:subClassOf ns1:BFO_0000004,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_volume> ;
+    ns2:GeologicalSpatialRelationsOntology_externally_connected_with <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core> .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_structure> rdfs:label "fault structure"@en ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:detachment_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:growth_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:low-angle_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:normal_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:oblique_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:reverse_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rotation_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:strike-slip_fault> ;
+    rdfs:comment "References:  Torabi and Berg (2011), Fossen (2020)."@en ;
+    rdfs:subClassOf ns1:BFO_0000031,
+        ns4:GeoCoreOntology_geological_structure ;
+    ns4:GeoCoreOntology_generically_depends_on <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_material_entity> .
+
+ns1:BFO_0000023 rdfs:label "role"@en ;
+    ns1:IAO_0000600 "b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be& b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed. (axiom label in BFO2 Reference: [061-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (Role x) (RealizableEntity x))) // axiom label in BFO2 CLIF: [061-001] "^^xsd:string ;
+    ns1:RO_0000081 ns1:BFO_0000004 ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:barrier>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:conduit>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:footwall>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:graben>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:hanging_wall>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:horst>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:major_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:minor_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:proto_lith>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:relay_damage_zone>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:subsidiary_fault> ;
+    rdfs:subClassOf ns1:BFO_0000017 .
+
+<http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> rdfs:label "fault zone"@en ;
+    ns1:BFO_0000050 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_material_entity> ;
+    ns1:BFO_0000051 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:damage_zone>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core> ;
+    ns1:RO_0000056 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:shear_deformation> ;
+    ns1:RO_0000087 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:barrier>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:conduit>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:major_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:minor_fault>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:subsidiary_fault> ;
+    ns1:RO_0002002 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface> ;
+    ns3:has_1D_boundary <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_tip_line> ;
+    rdfs:comment "Reference: Caine et al., (1996), Torabi and Berg, (2011),Fossen, (2020)."@en ;
+    rdfs:subClassOf ns1:BFO_0000002,
+        ns1:BFO_0000040,
+        ns4:GeoCoreOntology_geological_object .
+
+ns4:GeoCoreOntology_geological_object rdfs:label "geological object"@en ;
+    ns1:BFO_0000051 <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_volume> ;
+    ns1:BFO_0000067 ns4:GeoCoreOntology_geological_process ;
+    ns1:RO_0000056 ns4:GeoCoreOntology_geological_process ;
+    owl2vec:superClassOf <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:damage_zone>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:deformation_band_object>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_lens>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core_membrane>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_horse>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_zone> ;
+    rdfs:subClassOf ns1:BFO_0000004,
+        ns1:BFO_0000030 ;
+    ns4:GeoCoreOntology_carrier_of ns4:GeoCoreOntology_geological_structure ;
+    ns4:GeoCoreOntology_constituted_by ns4:GeoCoreOntology_earth_material ;
+    ns4:GeoCoreOntology_generated_by ns4:GeoCoreOntology_geological_process ;
+    ns4:GeoCoreOntology_has_age ns4:GeoCoreOntology_geological_age ;
+    ns2:GeologicalSpatialRelationsOntology_has_proper_spatial_part ns4:GeoCoreOntology_geological_boundary .
+
+ns1:BFO_0000019 rdfs:label "quality"@en ;
+    ns1:IAO_0000600 "a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized. (axiom label in BFO2 Reference: [055-001])"@en ;
+    ns1:IAO_0000601 "If an entity is a quality at any time that it exists, then it is a quality at every time that it exists. (axiom label in BFO2 Reference: [105-001])"@en ;
+    ns1:IAO_0000602 "(forall (x) (if (Quality x) (SpecificallyDependentContinuant x))) // axiom label in BFO2 CLIF: [055-001] "^^xsd:string,
+        "(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] "^^xsd:string ;
+    ns1:RO_0000059 ns4:GeoCoreOntology_geological_structure ;
+    owl2vec:superClassOf ns1:BFO_0000145,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:cohesion>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:continuity>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_maximum_separation>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_orientation>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface_shape>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:large_clasts_proportion>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:rock_quality>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:smeared>,
+        ns3:cohesive,
+        ns3:composite_shape,
+        ns3:continuous,
+        ns3:curved_shape,
+        ns3:irregular,
+        ns3:is_smeared,
+        ns3:non-cohesive,
+        ns3:not_smeared,
+        ns3:planar_shape,
+        ns3:semicontinuous,
+        ns4:GeoCoreOntology_geological_age ;
+    rdfs:subClassOf ns1:BFO_0000020 .
+
+ns1:BFO_0000004 rdfs:label "independent continuant"@en ;
+    ns1:BFO_0000067 ns1:BFO_0000003 ;
+    ns1:IAO_0000601 "For any independent continuant b and any time t there is some spatial region r such that b is located_in r at t. (axiom label in BFO2 Reference: [134-001])"@en,
+        "For every independent continuant b and time t during the region of time spanned by its life, there are entities which s-depends_on b during t. (axiom label in BFO2 Reference: [018-002])"@en ;
+    ns1:IAO_0000602 "(forall (x t) (if (IndependentContinuant x) (exists (r) (and (SpatialRegion r) (locatedInAt x r t))))) // axiom label in BFO2 CLIF: [134-001] "^^xsd:string,
+        "(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] "^^xsd:string,
+        "(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] "^^xsd:string ;
+    ns1:RO_0000085 ns1:BFO_0000034 ;
+    ns1:RO_0000087 ns1:BFO_0000023 ;
+    ns1:RO_0000091 ns1:BFO_0000016 ;
+    ns1:RO_0001015 ns1:BFO_0000004 ;
+    ns1:RO_0001025 ns1:BFO_0000004 ;
+    owl2vec:superClassOf ns1:BFO_0000040,
+        ns1:BFO_0000141,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:damage_zone>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_core>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_horse>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_material_entity>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_surface>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:fault_wall_volume>,
+        <http://www.semanticweb.org/quy/ontologies/2022/8/untitled-ontology-33#GeoFault:physical_slip_surface>,
+        ns4:GeoCoreOntology_geological_boundary,
+        ns4:GeoCoreOntology_geological_object ;
+    ns3:coeval_with ns1:BFO_0000004 ;
+    ns3:east_of ns1:BFO_0000004 ;
+    ns3:north_of ns1:BFO_0000004 ;
+    ns3:occupies ns1:BFO_0000006 ;
+    ns3:older_than ns1:BFO_0000004 ;
+    ns3:south_of ns1:BFO_0000004 ;
+    ns3:west_of ns1:BFO_0000004 ;
+    ns3:yonger_than ns1:BFO_0000004 ;
+    rdfs:comment "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything."@en ;
+    rdfs:subClassOf ns1:BFO_0000002 ;
+    ns4:GeoCoreOntology_carrier_of ns1:BFO_0000031 ;
+    ns2:GeologicalSpatialRelationsOntology_above ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_behind ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_below ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_externally_connected_with ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_has_non_tangential_proper_spatial_part ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_has_proper_spatial_part ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_has_tangential_proper_spatial_part ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_in_front_of ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_left_of ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_non_tangential_proper_spatial_part_of ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_proper_spatial_part_of ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_right_of ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_spatially_disconnected_from ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_spatially_discrete_from ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_spatially_identical_to ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_spatially_partially_overlaps ns1:BFO_0000004 ;
+    ns2:GeologicalSpatialRelationsOntology_tangential_proper_spatial_part_of ns1:BFO_0000004 .
+
+[] rdfs:comment "per discussion with Barry Smith"^^xsd:string .
+
+[] rdfs:comment "per discussion with Barry Smith"^^xsd:string .
+
+[] rdfs:comment "per discussion with Barry Smith"^^xsd:string .
+
+[] rdfs:comment "per discussion with Barry Smith"^^xsd:string .
+
+[] rdfs:comment "per discussion with Barry Smith"^^xsd:string .
+
+[] rdfs:comment "requested by Melanie Courtot"^^xsd:string .
+

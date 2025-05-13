@@ -1,0 +1,98 @@
+Query,Relevant Axioms IDs,Size of relevant axioms
+"A realizable entity  the manifestation of which brings about some result or end that is not essential to a continuant  in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant  in some kinds of natural, social or institutional contexts.","['82', '121', '188', '55', '65', '78', '157', '84', '209', '124', '64', '26']",12
+Rock Quality: a quality that is quality_of only Amount of Rock. It measures the property that related to rock itself.,"['114', '131', '18', '193']",4
+Fault Dip Direction: it measures the dipping direction of the Fault Surface Location.,['100'],1
+Fault Array Structure: a geological structure that is structure_of some Fault System. It is the spatial relationship and geometric arrangement among the Fault Surface related to multiple Fault Zone of a Fault System.,"['13', '123', '116', '92', '211', '112', '1', '208', '148']",9
+Earth fluid is an 'earth material' that is fluild.,"['42', '205']",2
+.Fault Surface Location: a two dimensional spatial region that Fault Surface occupies in the spatial region.,"['7', '48', '6']",3
+Fault Volume: a Rock Volume that is associated to  Fault Zone and Fault Wall. It has_part some Fault Wall and some Fault Zone.,"['87', '41', '108', '91', '73', '159', '182']",7
+It is a fiat surface that is 'located in' the external surface of a 'geological object'.,"['22', '61']",2
+Slickenside: smooth polished surface of parallel scratches or grooves.,['141'],1
+"Nonsystematic (random): a number of fault surfaces in a wide range of orientations, no systematic pattern can be concluded.",['208'],1
+Positive Flower Structure: a set of Fault Volume that their corresponding Fault Walls are moved relatively upward and the corresponding Fault System has_structure some Flower.,['97'],1
+"Physical Slip Surface: a fiat object part that is part_of some Fault Wall and externally_connected_with some Fault Core. It is the physical surface part of the wall, where major slip of a fault occurred.","['195', '63', '25', '35', '29']",5
+Continuity: a quality that is quality_of  some Fault Core Membrane. It describes the appearance continuity of the fault core membrane.,"['16', '79']",2
+Growth Fault (synonyms: Syn-sedimentation fault): a Fault Structure  in which the portion above the fault surface is thicker than the portion below .,['154'],1
+Detachment Fault: a Fault Structure with Fault Dip in value less than 10° in which the displacement is almost horizontally.,['184'],1
+Strike-Slip Fault: a Fault Structure that two Fault Wall move relative horizontally to each other laterally in a vertical plane that is approximately parallel to the strike of the fault.,"['133', '223', '72', '45']",4
+Fault System: a Rock Volume and has_part some Fault Volume.,"['13', '108', '70', '33']",4
+"A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.","['127', '210', '64']",3
+Brittle Fault Rock: a amount of rock generated_by some Brittle Shear Deformation. It results from the crushing  of a former rock (Protolith).,"['23', '32', '96', '39', '187', '85', '11']",7
+"Deformation Band: a geological object recognizable in from mm to cm in width, constituted_by some amount of rock and generated_by some Geological Deformation.It corresponds to a tabular strain localization feature that accommodates small displacement with strain-hardening.","['158', '147', '4']",3
+"Fault Core: a geological object that is part_of only Fault Zone, generated_by some Brittle Shear Deformation, constituted_by some Brittle Fault Rock. It accommodates the high-strain major shear displacement.","['63', '23', '3', '43', '54', '168', '120', '139', '31', '156']",10
+Flower: a set of fault surfaces related to strike-slip fault structure that stack together as petals of a flower in cross-section view.,['148'],1
+"Fault System Structure: a geological structure that is structure_of some Fault System. It is the arrangement among the Fault Walls of Fault Volumes, which are part_of a Fault System.","['33', '117', '186', '56', '97', '57']",6
+Negative Flower Structure: a set of Fault Volume that their corresponding Fault Walls are moved relatively downward and the corresponding Fault System has_structure some Flower.,['56'],1
+Chatter Mark: a small wedge-shaped structure that indicates one Fault Wall moves past another.,['136'],1
+Fault Maximum Separation: a relational quality is quality_of exactly 2 Fault Wall of a Fault Volume. It measures the separation between 2 Fault Wall of a Fault Volume and expressed by a real number indicating its value and a literal string indicating its measurement unit.,"['203', '152', '151', '62', '106', '201']",6
+"Slip Surface Structure: a geological structure, which is structure_of some Physical Slip Surface. It is structure of the direction of the displacement between the two fault walls.","['141', '68', '40', '29', '136']",5
+Dip Separation: it is the separation measured along a line parallel to the dip direction.,['62'],1
+Low-angle Fault: a Fault Structure having a Fault Dip value less than 30°,"['44', '214']",2
+It is a 'generically dependent continuant' that is the pattern of a non-atomic 'geological object''s internal arrangement.,"['115', '12', '66', '112', '117', '40', '181', '163', '125']",9
+"An entity that has temporal parts and that happens, unfolds or develops through time.","['192', '137', '81', '113', '204']",5
+"An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.","['52', '10', '175', '21']",4
+"Duplex : a set of imbricate (overlapping,stacking) thrusts which branch off from a single fault below and merge with a thrust fault above and which isolate rock bodies (horses).",['57'],1
+Protolith Role: a role that is role_of  some amount of rock. It indicates the original rock type of the rock before the rock participate¬¬_in some Geological Process.,"['46', '155', '26']",3
+Barrier: a role that is role_of some Fault Zone that not allows fluid flow.,"['170', '55']",2
+Fault Strike Azimuth: it measures the strike azimuth of the Fault Surface Location.,['20'],1
+Unconsolidated earth material is an 'earth material' that is consituted by an aggregate of solid particles but is not consolidated into a 'rock' it self.,['135'],1
+"Anastomosing: a set of fault surfaces that merge and diverge along strike, thereby creating a braided pattern in map view or cross section.",['116'],1
+"Minor Fault (synonym: Subsidiary fault, Spaly fault): a role is role_of  some Fault Zone. It can be realized when a Fault Zone having a minor displacement than a Major Fault within a Fault System.","['65', '140', '144', '101']",4
+Synthetic Fault: a Subsidiary Fault. It can be realized when a Fault Zone having a dip direction parallel to that of the Major Fault Zone belonging to the same Fault System.,['101'],1
+Fault Tip Line: a two-dimensional continuant fiat-boundary that is the locus of the points of the Fault Zone where theoretically the shear displacement goes to zero,"['165', '86', '75']",3
+Dextral Fault: a Strike-Slip Fault that that the Fault Wall on the opposite side of the fault from an observer has moved to the right.,['133'],1
+Conduit: a role that is role_of some Fault Zone that t allows fluid flow.,"['30', '82']",2
+Slickenline: a parallel straight line scratches or grooves.,['68'],1
+Fault Breccia: a Brittle Fault Rock containing at least in volume  30 %  “large” clasts (having a average clast size > 2 mm in diameter).,['187'],1
+Thrust Fault: a conjunction of Reverse Fault and Low-angle Fault,"['88', '214']",2
+Smeared:a quality that is quality_of  some Fault Core Membrane. It specifies whether the membrane has been ductically stretched.,"['38', '49', '138', '17', '178']",5
+Sinistral Fault: a Strike-Slip Fault that the Fault Wall on the opposite side of the fault from an observer has moved to the left.,['45'],1
+"It is a physical, or chemical, or biological, naturally occurring process that occurs on the Earth’s surface or subsurface and occupies some 'geological time interval'","['119', '122', '89', '161', '76', '190']",6
+Fault Horse: a geological object that is externally_connected_with only Physical Slip Surface. It is bounded by slip surfaces in 3D spatial region.,"['195', '27']",2
+Conjugate: a number of fault surfaces can be grouped into two sets that are inclined to one another at an angle of about 60°.,['211'],1
+Foot Wall: a role that is role_of  some Fault Wall located below the Fault Surface to which it is related.,"['84', '53']",2
+"An amount of rock is an 'earth material' that is a naturally occuring, inorganic, solid, homogeneous chemical compound with a crystalline structure.",['180'],1
+Large Clasts Proportion: a Rock Quality inheres in rock. It quantifies the proportion of the rock has clasts larger than 2mm.,['193'],1
+"Fault Gouge: a non-cohesive Brittle Fault Rock containing maximum in volume 30% “large” clasts 
+Superclass: Brittle Fault Rock (Def.13)","['171', '96']",2
+"Geological Deformation: a geological process, which changes the shape and/or the volume of some material entity that is constituted_by some amount of rock.","['34', '89', '183', '4']",4
+"Cohesion: a Rock Quality inheres in rock. It measures the capability of a rock  being broken into component granules with fingers or with the aid of a pen knife.
+Values: Cohesion, Non-cohesion",['18'],1
+"Fault Core Membrane: a geological object that is part_of some Fault Core, constituted_by some Brittle Fault Rock, has_quality some Smeared and has_quality some Continuity. It corresponds to a long and thin layer of the fault core.","['79', '168', '17', '19', '178', '11']",6
+Parallel: a set of fault surfaces that roughly parallel one another.,['123'],1
+Reverse Fault: a Fault Structure in which Fault Wall has_role Hanging Wall is higher or has moved upthrown relative to the Fault Wall has_role Footwall.,"['88', '194', '223', '214']",4
+Relay Zone: a role is role_of  some Rock Volume. It can be realized when a Rock Volume constitutes a link between two adajacent Fault Zone having similar characteristics and shows the displacement is transferred.,"['59', '124']",2
+Permeability: a disposition that is  disposition_of some Amount of Rock. It quantifies the capability a rock of letting a liquid or gas flow through under pressure.,"['176', '102']",2
+a Fault Structure in which the Fault Wall that  has_role Hanging Wall is lower or has moved downthrown relative to the Fault Wall that has_role Footwall.,"['223', '58']",2
+An amount of rock is a solid consolidated 'earth material' that is 'constituted by' an aggregate of particles made of mineral matter or material of biological origin.,"['46', '158', '102', '32', '131', '34', '155', '150']",8
+Fault Wall: a Rock Volume that is part_of Fault Volume and externally_connected_with Fault Core. It corresponds to the volume that is located aside the Fault Core.,"['153', '25', '106', '43', '95', '77', '24', '199', '53', '73', '182']",11
+Graben: a role is role_of  some Fault Wall when this Fault wall has_role some Hanging Wall of two normal faults dipping towards each other.,"['78', '36', '77']",3
+It is a quality that 'inheres in' a 'geological object' or 'earth material' that corresponds to the 'geological time interval' in which the 'geological process' that it was 'generated by' occupied.,"['118', '83']",2
+En echelon: a set of parallel fault surfaces that lie between two bounding surfaces and are inclined at an angle to the bounding surfaces.,['92'],1
+Fault Surface Shape: a quality is quality_of some Fault Surface. It does not reflect the exact topological specifications of a surface shape but an abstract geometry.,"['143', '197', '173']",3
+It is a BFO temporal interval that corresponds to a time interval within the Geological Time Scale.,['15'],1
+Antithetic Fault: a Subsidiary Fault. It can be realized when a Fault Zone having a dip direction cojugate to that of the Major Fault Zone belonging to the same Fault System.,['140'],1
+"Damage Zone: a geological object that is part_of only Fault Zone, externally connected with some Fault Core, and part_of some Fault Wall. It accommodates the low-strain and less intense brittle deformation.","['153', '185', '86', '105', '146', '120']",6
+Fault Orientation: a quality is quality_of some Fault Surface Location. It measures the orientation properties of a Fault Surface.,"['20', '48', '100', '202', '134']",5
+Strike Separation: it is the separation measured along the strike of the fault.,['203'],1
+An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.,"['67', '162', '126', '34', '167', '110']",6
+"Fault Zone: a geological object that is part_of  some Fault Volume. A Fault Zone is participates_in some Brittle Shear Deformation, and Fault Zone has_part some Fault Core and has_part some Damage Zone.","['30', '41', '170', '37', '165', '69', '185', '149', '166', '105', '90', '54', '144', '91', '109', '156']",16
+It is a 'relational quality' that 'inheres in' two distinct 'geological object' that are 'externally connected with',['9'],1
+"Cataclasite: a cohesive Brittle Fault Rock containing maximum in volume 30% “large” clasts 
+Superclass: Brittle Fault Rock (Def.13)","['39', '51']",2
+Horst and Graben: a set oFault Wall that are altrernately moved up and down along normal faults.,"['36', '186', '198']",3
+Rock Volume: a fiat object part part_of some geological object and constituted_by some amount of rock.,"['87', '70', '98', '59', '132', '199']",6
+An object that is 'generated by' some 'geological process' and has at least one part 'constituted by' some 'earth material' that is not an 'earth fluid'.,"['8', '66', '147', '119', '166', '205', '118', '122', '181', '98', '161', '146', '99', '61', '163', '27', '19', '31', '125']",19
+Fault Surface: a two-dimensional continuant fiat boundary related to a Fault Zone. It corresponds to the locus surface of the points that are equally distant to the two Fault Wall of the related Fault Zone.,"['7', '69', '143', '90', '129']",5
+"Oblique Fault: a Fault Structure that is a conjunction of Strike-Slip Fault and Normal Fault, or conjunction of Strike-Slip Fault and Reverse Fault.","['223', '174']",2
+Heave: it is the horizontal component of Dip Separation.,['152'],1
+Throw: it is the vertical component of Dip Separation.,['201'],1
+"Fault Core Lens: a geological object that is part_of some Fault Core, constituted_by some Amount of Rock and has¬_role¬¬ some Protolith.","['8', '155', '139']",3
+Horst: a role is role_of  some Fault Wall when this Fault Wall has_role some Foot Wall of two normal faults having divergent dips.,"['188', '95', '198']",3
+It is a natural amount of matter 'generated by' some 'geological process'.,"['180', '42', '135', '205', '161', '150', '76', '110']",8
+Rotation Fault (synonyms: Scissors Fault): a Fault Structure in which one Fault Wall rotated with respect to the other  around an axis perpendicular to the Fault Surface.,['179'],1
+Major Fault (synonym: Main fault): a role is role_of  some Fault Zone. It can be realized when a Fault Zone having a significantly larger displacement than the others within a Fault System.,"['37', '209']",2
+Fault Dip Angle: it measures the dipping angle of the Fault Surface Location.,['202'],1
+Fault Structure: a geological structure that is structure_of only Fault Volume. It is the pattern of human-eyes’ visible scale physical discontinuity and shear displacement of fault.,"['184', '179', '12', '194', '72', '154', '58', '174', '44', '159']",10
+"Brittle Shear Deformation: a Geological Deformation, which applies a material entity constituted_by a amount of rock shear stress and consequently induces physical discontinuities and displacements inside it.","['149', '3', '183', '85']",4
+"Relay: In map view, a set of parallel or subparallel non-coplanar fault surfaces that are spaced at a distance from one another across strike, but whose traces overlap or shows a “relayed” (transferred) pattern with one another along strike.",['1'],1
