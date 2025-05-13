@@ -1,20 +1,25 @@
 import numpy as np
+import pandas as pd
 import torch
-from tqdm.auto import tqdm
-from transformers import AutoTokenizer, AutoModel
+# from tqdm.auto import tqdm
+# from transformers import AutoTokenizer, AutoModel
 from transformers import BertTokenizer, BertModel
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
-import tensorflow as tf
-import numpy as np
+# import tensorflow as tf
 import faiss
+from flashtext import KeywordProcessor
+from gensim.models import KeyedVectors
+from nltk.tokenize import MWETokenizer
 
 # # file_path = "/home/jieying/ontologies/snomed2021_id_to_axiom_sentence.jsonberg_large_uncased_dict_file.pkl"
 # # file_path = "/home/jieying/ontologies/snomed2021_id_to_axiom_sentence.jsonSBERT_dict_file.pkl"
-file_path = "/home/matei/projects/ontoTextAlignment/code/python/Merged_GeoFault.ttl_id_to_axiom_sentence.json"
-file_path_BERT =file_path + "_BERT_embeddings.pkl"
-file_path_SBERT =file_path + "_SBERT_embeddings.pkl"
-file_path_SapBERT =file_path + "_SapBERT_embeddings.pkl"
+file_path = "generated_data/Merged_GeoFault_modified.ttl_id_to_axiom_sentence"
+file_path_BERT =file_path + ".json_BERT_embeddings.pkl"
+file_path_SBERT =file_path + ".json_SBERT_embeddings.pkl"
+file_path_SapBERT =file_path + ".json_SapBERT_embeddings.pkl"
+file_path_owl2vec_iri =file_path + "_iri.json_owl2vec_embeddings.pkl"
+file_path_owl2vec =file_path + ".json_owl2vec_embeddings.pkl"
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 CUDA_VISIBLE_DEVICE=0
@@ -264,7 +269,7 @@ def k_excerpt_SapBERT_withoutFAISS(input_text, arg2, k=None, is_file_path=True):
 
     return top_k_sentences
 
-# Update after suing FAISS indexing
+# Update after using FAISS indexing
 def k_excerpt_SapBERT(input_text, arg2, k=None, is_file_path=True):
     if is_file_path:
         with open(arg2, "rb") as file:
@@ -315,14 +320,146 @@ def k_excerpt_SapBERT(input_text, arg2, k=None, is_file_path=True):
 
     return top_k_sentences
 
+def get_owl2vec_embedding(text):
+    # Load the owl2vec model
+    model = KeyedVectors.load("./cache/output/ontology.embeddings", mmap='r')
+    wv = model.wv
+    keys = wv.index_to_key
+
+    text = text.replace(".", "").replace(",", "").replace(":", "").replace(";", "").lower()
+    text = text.replace("(", "").replace(")", "").replace("[", "").replace("]", "")
+    text = text.replace("'", "").replace('"', "").replace("`", "")
+    text = text.replace("!", "").replace("?", "")
+    text = text.replace("*", "").replace("+", "").replace("=", "")
+    text = text.replace("{", "").replace("}", "")
+    text = text.replace("|", "").replace("\\", "").replace("/", "").replace("~", "")
+    text = text.replace("`", "").replace("´", "").replace("`", "").replace("‘", "")
+    text = text.replace("“", "").replace("”", "").replace("'", "").replace("’", "")
+
+    
+    tokenizer = MWETokenizer()
+
+    keyword_processor = KeywordProcessor()
+
+    keyword_processor.add_keywords_from_list(keys)
+
+    keywords_found = keyword_processor.extract_keywords(text, span_info=True)
+
+    for a in keywords_found:
+        tokenizer.add_mwe(text[a[1]: a[2]].split())
+
+    tokens = tokenizer.tokenize(text.split())
+
+    embeddings = []
+    for token in tokens:
+        if token in wv.key_to_index:
+            embeddings.append(wv[token])
+        elif token.replace("_", " ") in wv.key_to_index:
+            embeddings.append(wv[token.replace("_", " ")])
+        elif token.replace("-", " ") in wv.key_to_index:
+            embeddings.append(wv[token.replace("-", " ")])
+        elif token[-1] == "s" and token[:-1] in wv.key_to_index:
+            embeddings.append(wv[token[:-1]])
+        else:
+            # print(token.replace("_", ""))
+            print(f"Token '{token}' not found in the model vocabulary.")
+
+    return np.mean(embeddings, axis=0) if embeddings else np.zeros(wv.vector_size)
+
+def k_excerpt_owl2vec(input_text, arg2, k=None, is_file_path=True):
+    if is_file_path:
+        with open(arg2, "rb") as file:
+            id_axiom_sentence_dict = np.load(file, allow_pickle=True).item()
+    else:
+        id_axiom_sentence_dict = arg2
+
+    # Convert dictionary values to a list of numpy arrays and reshape them to 1D
+    axiom_vector_list = [sentence.squeeze() for sentence in id_axiom_sentence_dict.values()]
+    axiom_vector_array = np.array(axiom_vector_list).astype("float32")
+
+    # Ensure that axiom_vector_array is 2D
+    if axiom_vector_array.ndim != 2:
+        raise ValueError("Embedding array is not 2-dimensional")
+
+    # Creating a FAISS index
+    dimension = axiom_vector_array.shape[1]
+    faiss_index = faiss.IndexFlatL2(dimension)
+    faiss_index.add(axiom_vector_array)
+
+    # Embed the input text
+    input_embedding = get_owl2vec_embedding(input_text).reshape(1, -1)
+
+    # Determining the value of k
+    if k is None:
+        A = len(id_axiom_sentence_dict) / 100
+        k = 100 if A < 100 else int(A)
+
+    if k > len(id_axiom_sentence_dict):
+        k = len(id_axiom_sentence_dict)
+
+    
+
+    _, indices = faiss_index.search(input_embedding, k)
+
+    # Compute cosine similarities for the top k results
+    similarities = {}
+    for idx in indices[0]:
+        key = list(id_axiom_sentence_dict.keys())[idx]
+        sentence_embedding = axiom_vector_array[idx].reshape(1, -1)
+        similarity_score = cosine_similarity(input_embedding, sentence_embedding)[0][0]
+        similarities[key] = similarity_score
+
+    # Sorting by similarity
+    sorted_similarities = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
+    top_k_sentences = dict(sorted_similarities)
+    
+    return top_k_sentences
 
 
+# input_text = "A fault is a planar fracture or discontinuity in a volume of rock across which there has been significant displacement as a result of rock-mass movements. Large faults within Earth's crust result from the action of plate tectonic forces, with the largest forming the boundaries between the plates, such as the megathrust faults of subduction zones or transform faults. Energy release associated with rapid movement on active faults is the cause of most earthquakes. Faults may also displace slowly, by aseismic creep."
 
+# print(k_excerpt_BERT(input_text,file_path_BERT,5).keys())
+# print(k_excerpt_SBERT(input_text,file_path_SBERT,5).keys())
+# print(k_excerpt_SapBERT(input_text,file_path_SapBERT,5).keys())
 
-input_text = "A fault is a planar fracture or discontinuity in a volume of rock across which there has been significant displacement as a result of rock-mass movements. Large faults within Earth's crust result from the action of plate tectonic forces, with the largest forming the boundaries between the plates, such as the megathrust faults of subduction zones or transform faults. Energy release associated with rapid movement on active faults is the cause of most earthquakes. Faults may also displace slowly, by aseismic creep."
-# print(get_SBERT_embedding(input_text).size())
-# print(list(berg_axiom_vectors.values())[1].size())
+benchmark_file_path = "./generated_data/new_GeoFaultBenchmark_with_rankings.csv"
 
-print(k_excerpt_BERT(input_text,file_path_BERT,5).keys())
-print(k_excerpt_SBERT(input_text,file_path_SBERT,5).keys())
-print(k_excerpt_SapBERT(input_text,file_path_SapBERT,5).keys())
+# load benchmark file into pandas datastore with first row as header
+benchmark_data = pd.read_csv(benchmark_file_path, header=0)
+if 'BERT_Ranking' not in benchmark_data.columns:
+    benchmark_data['BERT_Ranking'] = None
+if 'SBERT_Ranking' not in benchmark_data.columns:
+    benchmark_data['SBERT_Ranking'] = None
+if 'SapBERT_Ranking' not in benchmark_data.columns:
+    benchmark_data['SapBERT_Ranking'] = None
+if 'owl2vec_iri_Ranking' not in benchmark_data.columns:
+    benchmark_data['owl2vec_iri_Ranking'] = None
+if 'owl2vec_Ranking' not in benchmark_data.columns:
+    benchmark_data['owl2vec_Ranking'] = None
+
+# benchmark_data['BERT_Ranking'] = benchmark_data.apply(
+#     lambda row: k_excerpt_BERT(
+#         row['Query'],
+#         file_path_BERT, 10),
+#         axis=1)
+# benchmark_data['SBERT_Ranking'] = benchmark_data.apply(
+#     lambda row: k_excerpt_SBERT(
+#         row['Query'],
+#         file_path_SBERT, 10),
+#         axis=1)
+# benchmark_data['SapBERT_Ranking'] = benchmark_data.apply(
+#     lambda row: k_excerpt_SapBERT(
+#         row['Query'],
+#         file_path_SapBERT, 10),
+#         axis=1)
+# benchmark_data['owl2vec_Ranking'] = benchmark_data.apply(
+#     lambda row: k_excerpt_owl2vec(
+#         row['Query'],
+#         file_path_owl2vec_iri, 10),
+#         axis=1)
+benchmark_data['owl2vec_Ranking'] = benchmark_data.apply(
+    lambda row: k_excerpt_owl2vec(
+        row['Query'],
+        file_path_owl2vec, 10),
+        axis=1)
+benchmark_data.to_csv("./generated_data/new_GeoFaultBenchmark_with_rankings.csv", index=False)

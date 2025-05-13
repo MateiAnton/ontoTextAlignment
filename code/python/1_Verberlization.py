@@ -2,7 +2,7 @@ import sys
 import json
 from deeponto.onto import Ontology, OntologyVerbaliser
 
-def create_mapping_axiom_sentence(onto, verbaliser):
+def create_mapping_axiom_sentence(onto, verbaliser, verbaliser_iri):
     """Process ontology axioms to create mappings between axiom IDs, their string representations,
     and verbalized sentences.
 
@@ -15,20 +15,25 @@ def create_mapping_axiom_sentence(onto, verbaliser):
     """
     id_to_axiom = {}
     id_to_axiom_sentence = {}
+    id_to_axiom_sentence_iri = {}
     i = 0
 
     # Process subsumption axioms
     for axiom in onto.get_subsumption_axioms():
         try:
             i += 1
+            print(f"Processing subsumption axiom {axiom}")
             result = verbaliser.verbalise_class_subsumption_axiom(axiom)
+            result_iri = verbaliser_iri.verbalise_class_subsumption_axiom(axiom)
             data = {
                 'ID': i,
                 'axiom': str(axiom),
-                'Sentence': f"Every {result[0].verbal} is a {result[1].verbal}"
+                'Sentence': f"Every {result[0].verbal} is a {result[1].verbal}",
+                'Sentence_iri': f"Every {result_iri[0].verbal} is a {result_iri[1].verbal}"
             }
             id_to_axiom[data['ID']] = data['axiom']
             id_to_axiom_sentence[data['ID']] = data['Sentence']
+            id_to_axiom_sentence_iri[data['ID']] = data['Sentence_iri']
         except RuntimeError as e:
             print(f"Error processing subsumption axiom {axiom}: {e}")
             continue
@@ -38,18 +43,21 @@ def create_mapping_axiom_sentence(onto, verbaliser):
         try:
             i += 1
             result = verbaliser.verbalise_class_equivalence_axiom(axiom)
+            result_iri = verbaliser_iri.verbalise_class_equivalence_axiom(axiom)
             data = {
                 'ID': i,
                 'axiom': str(axiom),
-                'Sentence': f"The concept '{result[0].verbal}' is defined as {result[1].verbal}"
+                'Sentence': f"The concept '{result[0].verbal}' is defined as {result[1].verbal}",
+                'Sentence_iri': f"The concept '{result_iri[0].verbal}' is defined as {result_iri[1].verbal}"
             }
             id_to_axiom[data['ID']] = data['axiom']
             id_to_axiom_sentence[data['ID']] = data['Sentence']
+            id_to_axiom_sentence_iri[data['ID']] = data['Sentence_iri']
         except RuntimeError as e:
             print(f"Error processing equivalence axiom {axiom}: {e}")
             continue
 
-    return id_to_axiom, id_to_axiom_sentence
+    return id_to_axiom, id_to_axiom_sentence, id_to_axiom_sentence_iri
 
 def main(argv):
     """Main function to load an ontology, create mappings of axioms, and save them as JSON.
@@ -62,21 +70,26 @@ def main(argv):
     """
     ontology_file = argv[0]
     onto = Ontology(ontology_file)
-    verbaliser = OntologyVerbaliser(onto)
+    verbaliser = OntologyVerbaliser(onto, keep_iri=False)
+    verbaliser_iri = OntologyVerbaliser(onto, keep_iri=True)
     print("Finished loading the ontology and initializing the verbaliser.")
 
-    id_to_axiom, id_to_axiom_sentence = create_mapping_axiom_sentence(onto, verbaliser)
+    id_to_axiom, id_to_axiom_sentence, id_to_axiom_sentence_iri = create_mapping_axiom_sentence(onto, verbaliser, verbaliser_iri)
     print(f"Processed {len(id_to_axiom)} axioms and generated sentences.")
 
     # Save the dictionaries as JSON files
     id_to_axiom_file_path = f"{ontology_file}_id_to_axiom.json"
     id_to_axiom_sentence_file_path = f"{ontology_file}_id_to_axiom_sentence.json"
+    id_to_axiom_sentence_iri_file_path = f"{ontology_file}_id_to_axiom_sentence_iri.json"
     
     with open(id_to_axiom_file_path, 'w') as json_file:
         json.dump(id_to_axiom, json_file, indent=4)
     
     with open(id_to_axiom_sentence_file_path, 'w') as json_file2:
         json.dump(id_to_axiom_sentence, json_file2, indent=4)
+
+    with open(id_to_axiom_sentence_iri_file_path, 'w') as json_file3:
+        json.dump(id_to_axiom_sentence_iri, json_file3, indent=4)
     
     print("Dictionaries saved as JSON.")
 

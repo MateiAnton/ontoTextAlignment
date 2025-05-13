@@ -3,13 +3,13 @@ faiss_gpu==1.7.2
 gensim==4.3.2
 networkx==3.1
 nltk==3.8.1
-numpy==1.20.3
+numpy==1.23.5
 openai==1.24.0
 pandas==1.5.3
 scikit_learn==1.2.2
 scipy==1.10.1
-sentence_transformers==2.2.2
-tensorflow==2.4.1
+sentence_transformers==2.3.1
+tensorflow
 torch==2.0.1
 tqdm==4.65.0
-transformers==4.29.2
+transformers==4.32.1

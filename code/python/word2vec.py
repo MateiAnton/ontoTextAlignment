@@ -10,6 +10,8 @@ import time
 from tqdm import tqdm
 import re
 import gensim.downloader as api
+from gensim.models import KeyedVectors
+from huggingface_hub import hf_hub_download
 from scipy.spatial.distance import cosine
 
 
@@ -31,7 +33,7 @@ def preprocess(text):
 
 
 # Load Word2Vec model
-word2vec_model = api.load('word2vec-google-news-300')
+word2vec_model = KeyedVectors.load_word2vec_format(hf_hub_download(repo_id="Word2vec/wikipedia2vec_enwiki_20180420_win10_100d", filename="enwiki_20180420_win10_100d.txt"))
 
 def sentence_to_avg_vector(sentence, model):
     words = word_tokenize(sentence.lower())
@@ -52,6 +54,7 @@ def rank_sentences_with_word2vec(row, sentences, sentence_ids, model):
 
     cosine_scores = [1 - cosine(target_vector, vec) for vec in sentence_vectors]
     ranked_sentence_ids = [sentence_ids[i] for i in np.argsort(cosine_scores)[::-1]]
+    ranked_sentence_ids = ranked_sentence_ids[:10]  # Get top 10 sentences
     end_time = time.time()
     computation_time = end_time - start_time
     return ranked_sentence_ids, computation_time
@@ -66,7 +69,7 @@ def main(data_file, json_file):
     if file_extension == '.pkl':
         df = pd.read_pickle(data_file)
     elif file_extension == '.csv':
-        df = pd.read_csv(data_file,delimiter=';')
+        df = pd.read_csv(data_file,delimiter=',')
     elif file_extension == '.json':
         df = pd.read_json(data_file)
     else:

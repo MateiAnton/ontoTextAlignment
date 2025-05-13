@@ -1,6 +1,14 @@
 import pandas as pd
 
 import re
+import ast
+
+def can_convert_to_dict(string):
+    try:
+        result = ast.literal_eval(string)
+        return isinstance(result, dict)
+    except (SyntaxError, ValueError):
+        return False
 
 def hit_at_k(predicted, correct_answers, k):
     """
@@ -79,9 +87,11 @@ def mean_hit_at_k(predicted_list, correct_answers_list, k):
 def convert_string_to_number_list(input_data):
     # print("Input received:", input_data)
     if isinstance(input_data, list):
+        # print("it is a list")
         # Assuming the list contains numbers or numeric strings
         return [int(num) for num in input_data]
     elif isinstance(input_data, str):
+        # print("it is a string")
         # Handling string formatted as a list or set
         if input_data.startswith('[') and input_data.endswith(']'):
             content = input_data[1:-1]
@@ -98,6 +108,7 @@ def convert_string_to_number_list(input_data):
                 processed_numbers.append(int(num_clean))
         return processed_numbers
     elif isinstance(input_data, set):
+        # print("it is a set")
         # Assuming the set contains numeric values directly
         try:
             return [int(num) for num in input_data]
@@ -313,6 +324,8 @@ def calculate_mean_hit_at_k(predicted_answers, correct_answers, k, label):
         # Check the type of predicted answer and process accordingly
         if isinstance(pred, dict):
             processed_pred = convert_string_to_number_list(list(pred.keys()))
+        elif can_convert_to_dict(pred):
+            processed_pred = convert_string_to_number_list(list(ast.literal_eval(pred).keys()))
             
         else:
             if label == 'embedding':
@@ -378,6 +391,8 @@ def calculate_mean_mrr(predicted_answers, correct_answers, label):
         processed_pred = []
         if isinstance(pred, dict):
             processed_pred = convert_string_to_number_list(list(pred.keys()))
+        elif can_convert_to_dict(pred):
+            processed_pred = convert_string_to_number_list(list(ast.literal_eval(pred).keys()))
         else:
             if label == 'embedding':
                 processed_pred = convert_string_to_number_list(pred)
@@ -411,6 +426,23 @@ def eval_pro(df, flag):
 
     ks = [1, 5, 10]  # Defined k values
 
+    results = []
+    for k in ks:
+        model_name = 'Word2Vec_Ranking'
+        if model_name in df.columns:
+            hit_at_k_value = calculate_mean_hit_at_k(df[model_name], df[column_name], k, 'embedding')
+            print(f'hit@{k} for word2vec ranking: {hit_at_k_value}')
+            results.append(f'{hit_at_k_value}')
+        else:
+            print(f'Column {model_name} not found in DataFrame')
+    if model_name in df.columns:
+        mrr = calculate_mean_mrr(df[model_name], df[column_name], 'embedding')
+        print(f'MRR for word2vec: {mrr}')
+        results.append(f'{mrr}')
+    print(' & '.join(results))
+    print('**********')
+
+
     for bert in ['BERT', 'SBERT', 'SapBERT']:
         print('-------')
         results = []
@@ -430,144 +462,180 @@ def eval_pro(df, flag):
 
     print('**********')
 
-    for bert in ['BERT', 'SBERT', 'SapBERT']:
-        for model in ['7b', '13b']:
-            print('-------')
-            results = []
-            for k in ks:
-                column_20 = f'Answer_{bert}_llama_{model}_20'
-                column_10 = f'Answer_{bert}_llama_{model}_10'
-                if column_20 in df.columns:
-                    hit_at_k_value = calculate_mean_hit_at_k(df[column_20], df[column_name], k, 'llama')
-                    print(f'hit@{k} for {bert} + {model}+ 20: {hit_at_k_value}')
-                    results.append(f'{hit_at_k_value}')
-                else:
-                    print(f'Column {column_20} not found in DataFrame')
-                if flag and k == 1 and column_10 in df.columns:
-                    hit_at_k_value = calculate_mean_hit_at_k(df[column_10], df[column_name], 1, 'llama')
-                    print(f'hit@{1} for {bert} + {model} + 10: {hit_at_k_value}')
-                    results.append(f'{hit_at_k_value}')
-
-            if column_20 in df.columns:
-                mrr = calculate_mean_mrr(df[column_20], df[column_name], 'llama')
-                print(f'MRR for {bert} + {model}+ 20: {mrr}')
-                results.append(f'{mrr}')
-            if flag and column_10 in df.columns:
-                mrr = calculate_mean_mrr(df[column_10], df[column_name], 'llama')
-                print(f'MRR for {bert} + {model} + 10: {mrr}')
-                results.append(f'{mrr}')
-
-            print(' & '.join(results))
-            print('-----')
-        print('**********')
-
+    results = []
+    for k in ks:
+        model_name = 'owl2vec_iri_Ranking'
+        if model_name in df.columns:
+            hit_at_k_value = calculate_mean_hit_at_k(df[model_name], df[column_name], k, 'embedding')
+            print(f'hit@{k} for owl2vec with iri ranking: {hit_at_k_value}')
+            results.append(f'{hit_at_k_value}')
+        else:
+            print(f'Column {model_name} not found in DataFrame')
+    if model_name in df.columns:
+        mrr = calculate_mean_mrr(df[model_name], df[column_name], 'embedding')
+        print(f'MRR for owl2vec with iri: {mrr}')
+        results.append(f'{mrr}')
+    print(' & '.join(results))
     print('**********')
 
-    for bert in ['BERT', 'SBERT', 'SapBERT']:
-        for model in ['7b']:
-            print('-------')
-            results = []
-            for k in ks:
-                column_20 = f'Answer_{bert}_llama_{model}'
-                if column_20 in df.columns:
-                    hit_at_k_value = calculate_mean_hit_at_k(df[column_20], df[column_name], k, 'llama')
-                    print(f'hit@{k} for {bert} + llama {model}: {hit_at_k_value}')
-                    results.append(f'{hit_at_k_value}')
-                else:
-                    print(f'Column {column_20} not found in DataFrame')
+    results = []
+    for k in ks:
+        model_name = 'owl2vec_Ranking'
+        if model_name in df.columns:
+            hit_at_k_value = calculate_mean_hit_at_k(df[model_name], df[column_name], k, 'embedding')
+            print(f'hit@{k} for owl2vec ranking: {hit_at_k_value}')
+            results.append(f'{hit_at_k_value}')
+        else:
+            print(f'Column {model_name} not found in DataFrame')
+    if model_name in df.columns:
+        mrr = calculate_mean_mrr(df[model_name], df[column_name], 'embedding')
+        print(f'MRR for owl2vec: {mrr}')
+        results.append(f'{mrr}')
+    print(' & '.join(results))
+    print('**********')
+
+
+    # for bert in ['BERT', 'SBERT', 'SapBERT']:
+    #     for model in ['7b', '13b']:
+    #         print('-------')
+    #         results = []
+    #         for k in ks:
+    #             column_20 = f'Answer_{bert}_llama_{model}_20'
+    #             column_10 = f'Answer_{bert}_llama_{model}_10'
+    #             if column_20 in df.columns:
+    #                 hit_at_k_value = calculate_mean_hit_at_k(df[column_20], df[column_name], k, 'llama')
+    #                 print(f'hit@{k} for {bert} + {model}+ 20: {hit_at_k_value}')
+    #                 results.append(f'{hit_at_k_value}')
+    #             else:
+    #                 print(f'Column {column_20} not found in DataFrame')
+    #             if flag and k == 1 and column_10 in df.columns:
+    #                 hit_at_k_value = calculate_mean_hit_at_k(df[column_10], df[column_name], 1, 'llama')
+    #                 print(f'hit@{1} for {bert} + {model} + 10: {hit_at_k_value}')
+    #                 results.append(f'{hit_at_k_value}')
+
+    #         if column_20 in df.columns:
+    #             mrr = calculate_mean_mrr(df[column_20], df[column_name], 'llama')
+    #             print(f'MRR for {bert} + {model}+ 20: {mrr}')
+    #             results.append(f'{mrr}')
+    #         if flag and column_10 in df.columns:
+    #             mrr = calculate_mean_mrr(df[column_10], df[column_name], 'llama')
+    #             print(f'MRR for {bert} + {model} + 10: {mrr}')
+    #             results.append(f'{mrr}')
+
+    #         print(' & '.join(results))
+    #         print('-----')
+    #     print('**********')
+
+    # print('**********')
+
+    # for bert in ['BERT', 'SBERT', 'SapBERT']:
+    #     for model in ['7b']:
+    #         print('-------')
+    #         results = []
+    #         for k in ks:
+    #             column_20 = f'Answer_{bert}_llama_{model}'
+    #             if column_20 in df.columns:
+    #                 hit_at_k_value = calculate_mean_hit_at_k(df[column_20], df[column_name], k, 'llama')
+    #                 print(f'hit@{k} for {bert} + llama {model}: {hit_at_k_value}')
+    #                 results.append(f'{hit_at_k_value}')
+    #             else:
+    #                 print(f'Column {column_20} not found in DataFrame')
                 
-            if  column_20 in df.columns:
-                mrr = calculate_mean_mrr(df[column_20], df[column_name], 'llama')
-                print(f'MRR for {bert} + llama {model}: {mrr}')
-                results.append(f'{mrr}')
+    #         if  column_20 in df.columns:
+    #             mrr = calculate_mean_mrr(df[column_20], df[column_name], 'llama')
+    #             print(f'MRR for {bert} + llama {model}: {mrr}')
+    #             results.append(f'{mrr}')
 
-            print(' & '.join(results))
-            print('-----')
-        print('**********')
+    #         print(' & '.join(results))
+    #         print('-----')
+    #     print('**********')
 
-      # Enriched Columns
-    print("******Enriched*********")
-    enriched_keywords = ['onto enriched']  # Additional enriched categories
-    for keyword in enriched_keywords:
-        columns_with_enrich = [col for col in df.columns if keyword in col.lower()]
-        print(f'Columns related to {keyword}:', columns_with_enrich)
-        if columns_with_enrich:
-            for bert in ['BERT', 'SBERT', 'SapBERT']:
-                for model in ['3.5', '4']:
-                    print('-------')
-                    results = []
-                    for k in ks:
-                        column_name_enriched = f'{keyword} Answer GPT {model} {bert}'
-                        if column_name_enriched in df.columns:
-                            hit_at_k_value = calculate_mean_hit_at_k(df[column_name_enriched], df[column_name], k, 'gpt')
-                            print(f'hit@{k} for {bert} + enriched {model}: {hit_at_k_value}')
-                            results.append(f'{hit_at_k_value}')
-                        else:
-                            print(f'Column {column_name_enriched} not found in DataFrame')
-                    if results:
-                        mrr = calculate_mean_mrr(df.get(column_name_enriched, pd.Series()), df[column_name], 'gpt')
-                        print(f'MRR for {bert} + enriched {model}: {mrr}')
-                        results.append(f'{mrr}')
-                        print(' & '.join(results))
-                    print('-----')
-                print('**********')
-        else:
-            print('No enriched columns found for', keyword)
+    #   # Enriched Columns
+    # print("******Enriched*********")
+    # enriched_keywords = ['onto enriched']  # Additional enriched categories
+    # for keyword in enriched_keywords:
+    #     columns_with_enrich = [col for col in df.columns if keyword in col.lower()]
+    #     print(f'Columns related to {keyword}:', columns_with_enrich)
+    #     if columns_with_enrich:
+    #         for bert in ['BERT', 'SBERT', 'SapBERT']:
+    #             for model in ['3.5', '4']:
+    #                 print('-------')
+    #                 results = []
+    #                 for k in ks:
+    #                     column_name_enriched = f'{keyword} Answer GPT {model} {bert}'
+    #                     if column_name_enriched in df.columns:
+    #                         hit_at_k_value = calculate_mean_hit_at_k(df[column_name_enriched], df[column_name], k, 'gpt')
+    #                         print(f'hit@{k} for {bert} + enriched {model}: {hit_at_k_value}')
+    #                         results.append(f'{hit_at_k_value}')
+    #                     else:
+    #                         print(f'Column {column_name_enriched} not found in DataFrame')
+    #                 if results:
+    #                     mrr = calculate_mean_mrr(df.get(column_name_enriched, pd.Series()), df[column_name], 'gpt')
+    #                     print(f'MRR for {bert} + enriched {model}: {mrr}')
+    #                     results.append(f'{mrr}')
+    #                     print(' & '.join(results))
+    #                 print('-----')
+    #             print('**********')
+    #     else:
+    #         print('No enriched columns found for', keyword)
     
-    enriched_keywords = ['onto enriched']  # Additional enriched categories
-    for keyword in enriched_keywords:
-        columns_with_enrich = [col for col in df.columns if keyword in col.lower()]
-        print(f'Columns related to {keyword}:', columns_with_enrich)
-        if columns_with_enrich:
-            for bert in ['BERT', 'SBERT', 'SapBERT']:
-                for model in ['7b', '13b']:
-                    print('-------')
-                    results = []
-                    for k in ks:
-                        column_20 = f'onto enrich Answer_{bert}_llama_{model}'
-                        print('--------',column_20)
-                        if column_20 in df.columns:
-                            hit_at_k_value = calculate_mean_hit_at_k(df[column_20], df[column_name], k, 'llama')
-                            print(f'hit@{k} for {bert} + llama + {model} + onto enrich: {hit_at_k_value}')
-                            results.append(f'{hit_at_k_value}')
-                        else:
-                            print(f'Column {column_20} not found in DataFrame')
+    # enriched_keywords = ['onto enriched']  # Additional enriched categories
+    # for keyword in enriched_keywords:
+    #     columns_with_enrich = [col for col in df.columns if keyword in col.lower()]
+    #     print(f'Columns related to {keyword}:', columns_with_enrich)
+    #     if columns_with_enrich:
+    #         for bert in ['BERT', 'SBERT', 'SapBERT']:
+    #             for model in ['7b', '13b']:
+    #                 print('-------')
+    #                 results = []
+    #                 for k in ks:
+    #                     column_20 = f'onto enrich Answer_{bert}_llama_{model}'
+    #                     print('--------',column_20)
+    #                     if column_20 in df.columns:
+    #                         hit_at_k_value = calculate_mean_hit_at_k(df[column_20], df[column_name], k, 'llama')
+    #                         print(f'hit@{k} for {bert} + llama + {model} + onto enrich: {hit_at_k_value}')
+    #                         results.append(f'{hit_at_k_value}')
+    #                     else:
+    #                         print(f'Column {column_20} not found in DataFrame')
 
-                    if column_20 in df.columns:
-                        mrr = calculate_mean_mrr(df[column_20], df[column_name], 'llama')
-                        print(f'MRR for {bert} + llama + {model} + onto enrich: {mrr}')
-                        results.append(f'{mrr}')
-                        print(' & '.join(results))
-                    print('-----')
-            print('**********')
-        else:
-            print('No enriched columns found for', keyword)
+    #                 if column_20 in df.columns:
+    #                     mrr = calculate_mean_mrr(df[column_20], df[column_name], 'llama')
+    #                     print(f'MRR for {bert} + llama + {model} + onto enrich: {mrr}')
+    #                     results.append(f'{mrr}')
+    #                     print(' & '.join(results))
+    #                 print('-----')
+    #         print('**********')
+    #     else:
+    #         print('No enriched columns found for', keyword)
 
-    # GPT Section
-    print('****GPT******')
-    columns_with_gpt = [col for col in df.columns if 'gpt' in col.lower()]
-    if columns_with_gpt:
-        for bert in ['BERT', 'SBERT', 'SapBERT']:
-            for model in ['3.5', '4']:
-                print('-------')
-                results = []
-                for k in ks:
-                    column_name_gpt = f'Answer GPT {model} {bert}'
-                    if column_name_gpt in df.columns:
-                        hit_at_k_value = calculate_mean_hit_at_k(df[column_name_gpt], df[column_name], k, 'gpt')
-                        print(f'hit@{k} for {bert} + GPT {model}: {hit_at_k_value}')
-                        results.append(f'{hit_at_k_value}')
-                    else:
-                        print(f'Column {column_name_gpt} not found in DataFrame')
-                if results:
-                    mrr = calculate_mean_mrr(df.get(column_name_gpt, pd.Series()), df[column_name], 'gpt')
-                    print(f'MRR for {bert} + GPT {model}: {mrr}')
-                    results.append(f'{mrr}')
-                    print(' & '.join(results))
-                print('-----')
-            print('**********')
-    else:
-        print('No GPT-related columns found')
+    # # GPT Section
+    # print('****GPT******')
+    # columns_with_gpt = [col for col in df.columns if 'gpt' in col.lower()]
+    # if columns_with_gpt:
+    #     for bert in ['BERT', 'SBERT', 'SapBERT']:
+    #         for model in ['3.5', '4']:
+    #             print('-------')
+    #             results = []
+    #             for k in ks:
+    #                 column_name_gpt = f'Answer GPT {model} {bert}'
+    #                 if column_name_gpt in df.columns:
+    #                     hit_at_k_value = calculate_mean_hit_at_k(df[column_name_gpt], df[column_name], k, 'gpt')
+    #                     print(f'hit@{k} for {bert} + GPT {model}: {hit_at_k_value}')
+    #                     results.append(f'{hit_at_k_value}')
+    #                 else:
+    #                     print(f'Column {column_name_gpt} not found in DataFrame')
+    #             if results:
+    #                 mrr = calculate_mean_mrr(df.get(column_name_gpt, pd.Series()), df[column_name], 'gpt')
+    #                 print(f'MRR for {bert} + GPT {model}: {mrr}')
+    #                 results.append(f'{mrr}')
+    #                 print(' & '.join(results))
+    #             print('-----')
+    #         print('**********')
+    # else:
+    #     print('No GPT-related columns found')
 
-# Example of calling the function with the flag set as True or False
-# eval_pro(df, flag=True)
+
+# Load the DataFrame
+df = pd.read_csv('./generated_data/new_GeoFaultBenchmark_with_rankings.csv')
+
+eval_pro(df, flag=False)
