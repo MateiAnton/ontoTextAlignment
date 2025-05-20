@@ -1,5 +1,5 @@
 import sys
-from owl2vec_star import owl2vec_star
+from owl2vec_star.owl2vec_star import extract_owl2vec_model
 
 def main(argv):
     """
@@ -15,7 +15,7 @@ def main(argv):
     ontology_file = argv[1]
 
     # Embed ontology using owl2vec_star
-    gensim_model = owl2vec_star.extract_owl2vec_model(ontology_file, "./default.cfg", True, True, True)
+    gensim_model = extract_owl2vec_model(ontology_file, "./default.cfg", True, True, True)
     output_folder="./cache/output_pretrained/"
 
     #Gensim format
