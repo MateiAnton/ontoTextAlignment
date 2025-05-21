@@ -7,6 +7,7 @@ from flashtext import KeywordProcessor
 from gensim.models import KeyedVectors
 from nltk.tokenize import MWETokenizer
 from gensim.models import Word2Vec
+from tqdm.auto import tqdm
 
 def main(argv):
     """
@@ -34,8 +35,10 @@ def main(argv):
         return
     
     #Embedding vectors generated above
+    print("Loading Owl2Vec model...")
     model = KeyedVectors.load("/var/scratch/man471/cache/output_pretrained/ontology.embeddings", mmap='r')
     wv = model.wv
+    print(f"Model loaded with {len(wv.index_to_key)} vocabulary items.")
     # word2vec_model = Word2Vec.load("/home/matei/w2v_model/enwiki_model/word2vec_model")
     # Function to get Owl2Vec embedding for a given text
     def get_owl2vec_embedding(text):
@@ -83,7 +86,12 @@ def main(argv):
 
         # Get the embeddings for each word
         embeddings = []
-        for token in tokens:
+        if len(tokens) > 10:  # Only show progress for longer lists of tokens
+            token_iterator = tqdm(tokens, desc="Processing tokens", leave=False)
+        else:
+            token_iterator = tokens
+            
+        for token in token_iterator:
             if token in wv.key_to_index:
                 embeddings.append(wv[token])
             elif token.replace("_", " ") in wv.key_to_index:
@@ -102,13 +110,17 @@ def main(argv):
         
     
     # Compute embeddings for each sentence in the dictionary
-    sentence_embeddings = {key: get_owl2vec_embedding(sentence) for key, sentence in id_axiom_sentence_dict.items()}
+    sentence_embeddings = {}
+    print("Computing embeddings for axioms...")
+    for key, sentence in tqdm(id_axiom_sentence_dict.items(), desc="Computing embeddings", total=len(id_axiom_sentence_dict)):
+        sentence_embeddings[key] = get_owl2vec_embedding(sentence)
     
     # Save embeddings to a file
     file_path = f"{ontology_json_file}_owl2vec_pretrained_embeddings.pkl"
     sentence_embeddings_converted = sentence_embeddings
     
     # Use TensorFlow's file I/O to save the numpy arrays
+    print(f"Saving embeddings to '{file_path}'...")
     with tf.io.gfile.GFile(file_path, "wb") as file:
         np.save(file, sentence_embeddings_converted)
     print(f"Embeddings saved to '{file_path}'.")
