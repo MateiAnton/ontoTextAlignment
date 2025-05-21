@@ -20,6 +20,7 @@ file_path_SBERT =file_path + ".json_SBERT_embeddings.pkl"
 file_path_SapBERT =file_path + ".json_SapBERT_embeddings.pkl"
 file_path_owl2vec_iri =file_path + "_iri.json_owl2vec_embeddings.pkl"
 file_path_owl2vec =file_path + ".json_owl2vec_embeddings.pkl"
+file_path_owl2vec_pretrained =file_path + ".json_owl2vec_pretrained_embeddings.pkl"
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 CUDA_VISIBLE_DEVICE=0
@@ -322,7 +323,7 @@ def k_excerpt_SapBERT(input_text, arg2, k=None, is_file_path=True):
 
 def get_owl2vec_embedding(text):
     # Load the owl2vec model
-    model = KeyedVectors.load("./cache/output/ontology.embeddings", mmap='r')
+    model = KeyedVectors.load("/var/scratch/man471/cache/output_pretrained/ontology.embeddings", mmap='r')
     wv = model.wv
     keys = wv.index_to_key
 
@@ -436,6 +437,8 @@ if 'owl2vec_iri_Ranking' not in benchmark_data.columns:
     benchmark_data['owl2vec_iri_Ranking'] = None
 if 'owl2vec_Ranking' not in benchmark_data.columns:
     benchmark_data['owl2vec_Ranking'] = None
+if 'owl2vec_pretrained_Ranking' not in benchmark_data.columns:
+    benchmark_data['owl2vec_pretrained_Ranking'] = None
 
 # benchmark_data['BERT_Ranking'] = benchmark_data.apply(
 #     lambda row: k_excerpt_BERT(
@@ -457,9 +460,14 @@ if 'owl2vec_Ranking' not in benchmark_data.columns:
 #         row['Query'],
 #         file_path_owl2vec_iri, 10),
 #         axis=1)
-benchmark_data['owl2vec_Ranking'] = benchmark_data.apply(
+# benchmark_data['owl2vec_Ranking'] = benchmark_data.apply(
+#     lambda row: k_excerpt_owl2vec(
+#         row['Query'],
+#         file_path_owl2vec, 10),
+#         axis=1)
+benchmark_data['owl2vec_pretrained_Ranking'] = benchmark_data.apply(
     lambda row: k_excerpt_owl2vec(
         row['Query'],
-        file_path_owl2vec, 10),
+        file_path_owl2vec_pretrained, 10),
         axis=1)
 benchmark_data.to_csv("./generated_data/new_GeoFaultBenchmark_with_rankings.csv", index=False)
