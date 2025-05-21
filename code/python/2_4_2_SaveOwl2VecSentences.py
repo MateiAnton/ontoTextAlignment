@@ -34,9 +34,9 @@ def main(argv):
         return
     
     #Embedding vectors generated above
-    model = KeyedVectors.load("./cache/output_pretrained/ontology.embeddings", mmap='r')
+    model = KeyedVectors.load("/var/scratch/man471/cache/output_pretrained/ontology.embeddings", mmap='r')
     wv = model.wv
-    word2vec_model = Word2Vec.load("/home/matei/w2v_model/enwiki_model/word2vec_model")
+    # word2vec_model = Word2Vec.load("/home/matei/w2v_model/enwiki_model/word2vec_model")
     # Function to get Owl2Vec embedding for a given text
     def get_owl2vec_embedding(text):
         """
@@ -92,8 +92,8 @@ def main(argv):
                 embeddings.append(wv[token.replace("-", " ")])
             elif token[-1] == "s" and token[:-1] in wv.key_to_index:
                 embeddings.append(wv[token[:-1]])
-            elif word2vec_model.wv.has_index_for(token):
-                embeddings.append(word2vec_model.wv[token])
+            # elif word2vec_model.wv.has_index_for(token):
+            #     embeddings.append(word2vec_model.wv[token])
             else:
                 # print(token.replace("_", ""))
                 print(f"Token '{token}' not found in the model vocabulary.")
