@@ -16,7 +16,7 @@ def main(argv):
 
     # Embed ontology using owl2vec_star
     gensim_model = extract_owl2vec_model(ontology_file, "./default.cfg", True, True, True)
-    output_folder="./cache/output_pretrained/"
+    output_folder="/var/scratch/man471/cache/output_pretrained"
 
     #Gensim format
     gensim_model.save(output_folder+"ontology.embeddings")
