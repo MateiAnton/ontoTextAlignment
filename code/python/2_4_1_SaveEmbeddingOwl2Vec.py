@@ -19,9 +19,9 @@ def main(argv):
     output_folder="/var/scratch/man471/cache/output_pretrained"
 
     #Gensim format
-    gensim_model.save(output_folder+"ontology.embeddings")
+    gensim_model.save(output_folder+"/ontology.embeddings")
     #Txt format
-    gensim_model.wv.save_word2vec_format(output_folder+"ontology.embeddings.txt", binary=False)
+    gensim_model.wv.save_word2vec_format(output_folder+"/ontology.embeddings.txt", binary=False)
 
 
 if __name__ == "__main__":
