@@ -494,6 +494,22 @@ def eval_pro(df, flag):
     print(' & '.join(results))
     print('**********')
 
+    results = []
+    for k in ks:
+        model_name = 'owl2vec_pretrained_Ranking'
+        if model_name in df.columns:
+            hit_at_k_value = calculate_mean_hit_at_k(df[model_name], df[column_name], k, 'embedding')
+            print(f'hit@{k} for owl2vec_pretrained ranking: {hit_at_k_value}')
+            results.append(f'{hit_at_k_value}')
+        else:
+            print(f'Column {model_name} not found in DataFrame')
+    if model_name in df.columns:
+        mrr = calculate_mean_mrr(df[model_name], df[column_name], 'embedding')
+        print(f'MRR for owl2vec_pretrained: {mrr}')
+        results.append(f'{mrr}')
+    print(' & '.join(results))
+    print('**********')
+
 
     # for bert in ['BERT', 'SBERT', 'SapBERT']:
     #     for model in ['7b', '13b']:
