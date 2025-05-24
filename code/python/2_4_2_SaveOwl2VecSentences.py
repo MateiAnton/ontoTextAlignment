@@ -52,7 +52,7 @@ def main(argv):
         np.ndarray: The embedding vector for the input text.
         """
 
-        text = text.replace(".", "").replace(",", "").replace(": ", " ").replace(";", "").lower()
+        text = text.replace(". ", " ").replace(",", "").replace(": ", " ").replace(";", "").lower()
         text = text.replace("(", "").replace(")", "").replace("[", "").replace("]", "")
         text = text.replace("'", "").replace('"', "").replace("`", "")
         text = text.replace("!", "").replace("?", "")
