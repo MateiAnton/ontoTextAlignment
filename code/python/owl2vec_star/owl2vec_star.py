@@ -49,11 +49,10 @@ def extract_owl2vec_model(ontology_file, config_file, uri_doc, lit_doc, mix_doc)
         config['DOCUMENT']['cache_dir'] = './cache'
 
     if not os.path.exists(config['DOCUMENT']['cache_dir']):
-        os.mkdir(config['DOCUMENT']['cache_dir'])
-
+        os.mkdir(config['DOCUMENT']['cache_dir'])    
     if embedding_model == 'word2vec':
         model_ = __perform_ontology_embedding(config)
-    elif embedding_model.startswith('bert'):
+    elif embedding_model in ['bert', 'bert-large', 'sbert', 'sapbert']:
         if not BERT_AVAILABLE:
             raise ImportError("BERT embeddings require torch and transformers libraries. Please install them with: pip install torch transformers sentence-transformers")
         model_ = __perform_bert_ontology_embedding(config)

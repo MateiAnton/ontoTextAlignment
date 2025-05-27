@@ -23,7 +23,7 @@ def test_bert_variant(variant, model_name=None):
         
         # Basic settings
         config['BASIC'] = {
-            'ontology_file': '/home/matei/projects/ontoTextAlignment/code/python/modified_original_data/Merged_GeoFault_modified.ttl'
+            'ontology_file': '/home/matei/projects/ontoTextAlignment/code/python/modified_original_data/Merged_GeoFault.ttl'
         }
         
         # Document settings
@@ -92,18 +92,47 @@ def main():
     # Create cache dir if it doesn't exist
     if not os.path.exists('./cache'):
         os.makedirs('./cache')
+    
+    # Verify the ontology file exists
+    ontology_file = '/home/matei/projects/ontoTextAlignment/code/python/modified_original_data/Merged_GeoFault.ttl'
+    if not os.path.exists(ontology_file):
+        logger.error(f"Ontology file not found: {ontology_file}")
+        logger.info("Available ontology files:")
+        for potential_file in [
+            '/home/matei/projects/ontoTextAlignment/code/python/modified_original_data/Merged_GeoFault.ttl',
+            '/home/matei/projects/ontoTextAlignment/code/python/original_data/Merged_GeoFault.ttl',
+            '/home/matei/projects/ontoTextAlignment/code/python/modified_original_data/Merged_GeoFault_modified.ttl'
+        ]:
+            logger.info(f"  {potential_file}: {'EXISTS' if os.path.exists(potential_file) else 'NOT FOUND'}")
+        return
         
     # Test each variant (limited parameters for quick testing)
     variants = [
         ('bert', 'bert-base-uncased'),
-        ('bert-large', None),  # Uses default bert-large-uncased
+        ('bert-large', 'bert-large-uncased'),  # Explicitly set the model name
         ('sbert', 'paraphrase-MiniLM-L6-v2'),
-        ('sapbert', None)  # Uses default SapBERT model
+        ('sapbert', 'cambridgeltl/SapBERT-from-PubMedBERT-fulltext')  # Explicitly set the model name
     ]
     
+    # Only test one model at a time to avoid CUDA memory issues
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] in [v[0] for v in variants]:
+        # Test only the specified variant
+        variant_name = sys.argv[1]
+        selected_variant = next((v for v in variants if v[0] == variant_name), None)
+        if selected_variant:
+            success = test_bert_variant(*selected_variant)
+            logger.info(f"{selected_variant[0]}: {'SUCCESS' if success else 'FAILED'}")
+        return
+    
+    # Test all variants sequentially
     results = {}
     for variant, model_name in variants:
-        results[variant] = test_bert_variant(variant, model_name)
+        try:
+            results[variant] = test_bert_variant(variant, model_name)
+        except Exception as e:
+            logger.error(f"Unexpected error testing {variant}: {str(e)}")
+            results[variant] = False
         
     # Print summary
     logger.info("\n=== Test Results ===")
